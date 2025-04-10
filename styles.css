@@ -1,0 +1,474 @@
+:root {
+    /* Цвета */
+    --primary: #4361ee;
+    --primary-dark: #3a56d4;
+    --secondary: #3f37c9;
+    --text: #2b2d42;
+    --text-light: #8d99ae;
+    --background: #ffffff;
+    --background-alt: #f8f9fa;
+    --border: #e9ecef;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Тёмная тема */
+    --dark-text: #f8f9fa;
+    --dark-background: #212529;
+    --dark-background-alt: #343a40;
+    --dark-border: #495057;
+}
+
+/* Базовые стили */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+body[data-theme="dark"] {
+    color: var(--dark-text);
+    background: var(--dark-background);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Кнопки */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    gap: 8px;
+}
+
+.button--primary {
+    background: var(--primary);
+    color: white;
+}
+
+.button--primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.button--secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.button--secondary:hover {
+    background: rgba(67, 97, 238, 0.1);
+}
+
+/* Хедер */
+.header {
+    position: sticky;
+    top: 0;
+    background: var(--background);
+    box-shadow: var(--shadow);
+    z-index: 100;
+    transition: background 0.3s;
+}
+
+body[data-theme="dark"] .header {
+    background: var(--dark-background-alt);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+}
+
+body[data-theme="dark"] .logo {
+    color: var(--dark-text);
+}
+
+.logo__icon {
+    font-size: 1.8rem;
+}
+
+/* Навигация */
+.nav__list {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav__link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav__link:hover, .nav__link:focus {
+    color: var(--primary);
+}
+
+body[data-theme="dark"] .nav__link {
+    color: var(--dark-text);
+}
+
+/* Поиск */
+.search {
+    display: flex;
+    align-items: center;
+    background: var(--background-alt);
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: all 0.3s;
+}
+
+body[data-theme="dark"] .search {
+    background: var(--dark-background);
+}
+
+.search__input {
+    border: none;
+    background: transparent;
+    padding: 8px;
+    width: 200px;
+    color: var(--text);
+}
+
+body[data-theme="dark"] .search__input {
+    color: var(--dark-text);
+}
+
+.search__input:focus {
+    outline: none;
+}
+
+.search__button {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+/* Герой */
+.hero {
+    padding: 80px 0;
+}
+
+.hero__content {
+    max-width: 600px;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 32px;
+}
+
+body[data-theme="dark"] .hero__subtitle {
+    color: var(--dark-text);
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* Категории */
+.categories {
+    padding: 60px 0;
+}
+
+.section__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    position: relative;
+    display: inline-block;
+}
+
+.section__title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.categories__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+body[data-theme="dark"] .category-card {
+    background: var(--dark-background-alt);
+    border-color: var(--dark-border);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.category-card__icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.category-card__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.category-card__count {
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+/* Гайды */
+.popular-guides {
+    padding: 60px 0;
+    background: var(--background-alt);
+}
+
+body[data-theme="dark"] .popular-guides {
+    background: var(--dark-background-alt);
+}
+
+.section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.guides__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.guide-card {
+    background: var(--background);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+body[data-theme="dark"] .guide-card {
+    background: var(--dark-background-alt);
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.guide-card__image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.guide-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.guide-card:hover .guide-card__image img {
+    transform: scale(1.05);
+}
+
+.guide-card__badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--primary);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.guide-card__content {
+    padding: 20px;
+}
+
+.guide-card__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.guide-card__rating {
+    color: #ffc107;
+}
+
+.guide-card__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.guide-card__excerpt {
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+/* Футер */
+.footer {
+    background: var(--dark-background-alt);
+    color: var(--dark-text);
+    padding: 60px 0 20px;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.footer__text {
+    opacity: 0.8;
+    margin-bottom: 16px;
+}
+
+.footer__links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__link {
+    display: block;
+    padding: 8px 0;
+    color: var(--dark-text);
+    opacity: 0.8;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer__link:hover {
+    opacity: 1;
+}
+
+.footer__link i {
+    margin-right: 8px;
+}
+
+.footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer__copyright {
+    opacity: 0.6;
+    font-size: 0.875rem;
+}
+
+/* Переключение темы */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.theme-toggle:hover {
+    color: var(--primary);
+}
+
+body[data-theme="dark"] .theme-toggle {
+    color: var(--dark-text);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header__inner {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero {
+        text-align: center;
+    }
+    
+    .hero__buttons {
+        flex-direction: column;
+    }
+}

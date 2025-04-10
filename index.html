@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix – Ремонт электроники в Казахстане</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="logo">
+                    <span class="logo__icon">🔧</span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="#" class="nav__link">Телевизоры</a></li>
+                        <li><a href="#" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="#" class="nav__link">Игровые приставки</a></li>
+                        <li><a href="#" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="#" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="theme-toggle" aria-label="Переключить тему">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="search">
+                        <input type="text" placeholder="Поиск по гайдам..." class="search__input">
+                        <button class="search__button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Ремонт электроники без лишних сложностей</h1>
+                    <p class="hero__subtitle">Понятные инструкции для Казахстана</p>
+                    <div class="hero__buttons">
+                        <a href="#categories" class="button button--primary">Смотреть гайды</a>
+                        <a href="#" class="button button--secondary">Как это работает?</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="img/hero-image.png" alt="Ремонт электроники">
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="categories">
+            <div class="container">
+                <h2 class="section__title">Категории</h2>
+                <div class="categories__grid">
+                    <!-- Телевизоры -->
+                    <a href="#" class="category-card">
+                        <div class="category-card__icon">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h3 class="category-card__title">Телевизоры</h3>
+                        <p class="category-card__count">24 гайда</p>
+                    </a>
+                    <!-- Остальные категории аналогично -->
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-guides">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Популярные гайды</h2>
+                    <a href="#" class="link">Смотреть все</a>
+                </div>
+                <div class="guides__grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/guide1.jpg" alt="Чистка ноутбука">
+                            <span class="guide-card__badge">Новое</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span class="guide-card__rating">
+                                    <i class="fas fa-star"></i> 4.8
+                                </span>
+                                <span class="guide-card__time">
+                                    <i class="far fa-clock"></i> 12 мин
+                                </span>
+                            </div>
+                            <h3 class="guide-card__title">Как почистить ноутбук от пыли</h3>
+                            <p class="guide-card__excerpt">Подробная инструкция для новичков с фото</p>
+                            <a href="#" class="button button--small">Читать</a>
+                        </div>
+                    </article>
+                    <!-- Остальные гайды -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__title">TechFix</h3>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Разделы</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Главная</a></li>
+                        <li><a href="#" class="footer__link">Гайды</a></li>
+                        <li><a href="#" class="footer__link">О проекте</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="#" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
