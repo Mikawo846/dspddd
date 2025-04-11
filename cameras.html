@@ -4,33 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт фотоаппаратов | TechFix</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Шапка с активной вкладкой "Фотоаппараты" -->
     <header class="header">
-        <!-- Такая же шапка как в tv.html -->
+        <div class="container">
+            <div class="header__inner">
+                <a href="./index.html" class="logo">
+                    <span class="logo__icon">🔧</span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="./tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="./cameras.html" class="nav__link active">Фотоаппараты</a></li> <!-- АКТИВНАЯ ВКЛАДКА -->
+                        <li><a href="./consoles.html" class="nav__link">Игровые приставки</a></li>
+                        <li><a href="./laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="./smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="theme-toggle" aria-label="Переключить тему">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main class="category-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="index.html">Главная</a> → <span>Фотоаппараты</span>
+                <a href="./index.html">Главная</a> → <span>Фотоаппараты</span>
             </div>
 
             <h1 class="category-title">Ремонт фотоаппаратов</h1>
+            <img src="./img/cameras-banner.jpg" alt="Ремонт фотоаппаратов" class="category-banner">
             <p class="category-description">Профессиональный ремонт зеркальных и беззеркальных камер</p>
 
             <section class="common-problems">
                 <h2>Частые проблемы</h2>
                 <div class="problems-grid">
-                    <a href="guides/camera-sensor.html" class="problem-card">
+                    <a href="./guides/camera-sensor.html" class="problem-card">
                         <i class="fas fa-camera"></i>
                         <h3>Пятна на матрице</h3>
                         <p>Чистка сенсора</p>
                     </a>
-                    <!-- Другие проблемы -->
+                    <a href="./guides/camera-lens.html" class="problem-card">
+                        <i class="fas fa-expand"></i>
+                        <h3>Залипание объектива</h3>
+                        <p>Ремонт механики</p>
+                    </a>
                 </div>
             </section>
 
@@ -39,13 +66,13 @@
                 <div class="guides-grid">
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/camera-repair.jpg" alt="Чистка матрицы">
+                            <img src="./img/camera-repair-guide.jpg" alt="Чистка матрицы">
                             <span class="difficulty-badge medium">Средняя сложность</span>
                         </div>
                         <div class="guide-card__content">
                             <h3>Чистка матрицы</h3>
                             <p>Безопасное удаление пыли</p>
-                            <a href="guides/camera-sensor-clean.html" class="button">Читать</a>
+                            <a href="./guides/camera-sensor-clean.html" class="button">Читать</a>
                         </div>
                     </article>
                 </div>
@@ -54,9 +81,26 @@
     </main>
 
     <footer class="footer">
-        <!-- Такой же подвал как в tv.html -->
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__title">TechFix</h3>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="tel:+77771234567" class="footer__link"><i class="fas fa-phone"></i> +7 (777) 123-45-67</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> support@techfix.kz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
