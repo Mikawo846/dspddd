@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ремонт телевизоров | TechFix</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка как в index.html -->
+    
+    <main class="category-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a> → <span>Телевизоры</span>
+            </div>
+
+            <h1 class="category-title">Ремонт телевизоров</h1>
+            
+            <div class="category-header">
+                <img src="../img/tv-banner.jpg" alt="Ремонт телевизоров" class="category-banner">
+                <p class="category-description">Подробные инструкции по ремонту телевизоров различных марок и моделей. От простых проблем до сложного ремонта.</p>
+            </div>
+
+            <section class="common-problems">
+                <h2>Частые проблемы</h2>
+                <div class="problems-grid">
+                    <a href="../guides/tv-no-power.html" class="problem-card">
+                        <i class="fas fa-power-off"></i>
+                        <h3>Не включается</h3>
+                        <p>Решения для проблем с питанием</p>
+                    </a>
+                    <a href="../guides/tv-no-image.html" class="problem-card">
+                        <i class="fas fa-tv"></i>
+                        <h3>Нет изображения</h3>
+                        <p>Диагностика и ремонт</p>
+                    </a>
+                    <!-- Другие частые проблемы -->
+                </div>
+            </section>
+
+            <section class="guides-section">
+                <div class="section-header">
+                    <h2>Гайды по ремонту</h2>
+                    <div class="sort-options">
+                        <span>Сортировать:</span>
+                        <select>
+                            <option>По популярности</option>
+                            <option>По новизне</option>
+                            <option>По сложности</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="guides-grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="../img/tv-repair-1.jpg" alt="Замена подсветки">
+                            <span class="difficulty easy">Для начинающих</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-meta">
+                                <span class="brand">Samsung</span>
+                                <span class="time"><i class="far fa-clock"></i> 25 мин</span>
+                            </div>
+                            <h3>Замена подсветки LED телевизора</h3>
+                            <p>Пошаговая инструкция с фотографиями каждого этапа работы</p>
+                            <div class="guide-footer">
+                                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                                <a href="../guides/tv-backlight.html" class="button button--small">Читать</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Другие гайды -->
+                </div>
+            </section>
+            
+            <section class="brands-section">
+                <h2>Ремонт по брендам</h2>
+                <div class="brands-grid">
+                    <a href="tv-samsung.html" class="brand-card">
+                        <img src="../img/brands/samsung.png" alt="Samsung">
+                    </a>
+                    <a href="tv-lg.html" class="brand-card">
+                        <img src="../img/brands/lg.png" alt="LG">
+                    </a>
+                    <!-- Другие бренды -->
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Подвал как в index.html -->
+    <script src="../app.js"></script>
+</body>
+</html>
