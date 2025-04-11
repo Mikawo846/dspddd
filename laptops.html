@@ -1,33 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ремонт ноутбуков</title>
-  <link rel="stylesheet" href="styles.css" />
+    <!-- Такой же head -->
+    <title>Ремонт ноутбуков | TechFix</title>
 </head>
 <body>
-  <nav><a href="index.html">Главная</a> → Ноутбуки</nav>
-  <h1>Ремонт ноутбуков</h1>
-  <img src="laptop-repair.jpg" alt="Ремонт ноутбуков" />
-  <p>Устранение неисправностей ноутбуков: от механики до софта.</p>
+    <header class="header">
+        <!-- Шапка -->
+    </header>
 
-  <h2>Частые проблемы</h2>
-  <ul>
-    <li><strong>Не включается</strong> — <a href="#">Диагностика платы</a></li>
-    <li><strong>Медленно работает</strong> — <a href="#">Чистка и апгрейд</a></li>
-    <li><strong>Нет изображения</strong> — <a href="#">Проверка матрицы</a></li>
-    <li><strong>Не заряжается</strong> — <a href="#">Разъём питания</a></li>
-  </ul>
+    <main class="category-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> → <span>Ноутбуки</span>
+            </div>
 
-  <h2>Гайды по ремонту</h2>
-  <select>
-    <option>По популярности</option>
-    <option>По новизне</option>
-  </select>
+            <h1 class="category-title">Ремонт ноутбуков</h1>
+            <p class="category-description">Ремонт всех марок ноутбуков</p>
 
-  <div class="guide">
-    <img src="fan-clean.jpg" alt="Чистка кулера" />
-    <p><strong>Чистка кулера</strong><br />Asus, Lenovo<br />⏱️ 30 мин</p>
-  </div>
+            <section class="common-problems">
+                <h2>Частые проблемы</h2>
+                <div class="problems-grid">
+                    <a href="guides/laptop-overheat.html" class="problem-card">
+                        <i class="fas fa-fire"></i>
+                        <h3>Перегрев</h3>
+                        <p>Чистка системы охлаждения</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="guides-section">
+                <h2>Гайды по ремонту</h2>
+                <div class="guides-grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/laptop-repair.jpg" alt="Чистка ноутбука">
+                            <span class="difficulty-badge easy">Для начинающих</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3>Чистка от пыли</h3>
+                            <p>Безопасная разборка</p>
+                            <a href="guides/laptop-clean.html" class="button">Читать</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- Подвал -->
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
