@@ -78,6 +78,7 @@ body[data-theme="dark"] {
 
 /* Хедер */
 .header {
+    background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
     position: sticky;
     top: 0;
     background: var(--background);
