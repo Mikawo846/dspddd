@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ремонт фотоаппаратов | TechFix</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+    
+    <main class="category-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a> → <span>Фотоаппараты</span>
+            </div>
+
+            <h1 class="category-title">Ремонт фотоаппаратов</h1>
+            
+            <div class="category-header">
+                <img src="../img/cameras-banner.jpg" alt="Ремонт фотоаппаратов" class="category-banner">
+                <p class="category-description">Подробные инструкции по ремонту зеркальных и беззеркальных камер. От чистки матрицы до ремонта механики.</p>
+            </div>
+
+            <section class="common-problems">
+                <h2>Частые проблемы</h2>
+                <div class="problems-grid">
+                    <a href="../guides/camera-sensor.html" class="problem-card">
+                        <i class="fas fa-camera"></i>
+                        <h3>Пятна на снимках</h3>
+                        <p>Чистка матрицы</p>
+                    </a>
+                    <a href="../guides/camera-lens.html" class="problem-card">
+                        <i class="fas fa-expand"></i>
+                        <h3>Не выезжает объектив</h3>
+                        <p>Ремонт механики</p>
+                    </a>
+                    <a href="../guides/camera-focus.html" class="problem-card">
+                        <i class="fas fa-crosshairs"></i>
+                        <h3>Не фокусируется</h3>
+                        <p>Настройка автофокуса</p>
+                    </a>
+                    <a href="../guides/camera-error.html" class="problem-card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Ошибки камеры</h3>
+                        <p>Диагностика и решение</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="guides-section">
+                <div class="section-header">
+                    <h2>Гайды по ремонту</h2>
+                    <div class="sort-options">
+                        <span>Сортировать:</span>
+                        <select>
+                            <option>По популярности</option>
+                            <option>По новизне</option>
+                            <option>По сложности</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="guides-grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="../img/camera-repair-1.jpg" alt="Чистка матрицы">
+                            <span class="difficulty hard">Сложный</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-meta">
+                                <span class="brand">Canon</span>
+                                <span class="time"><i class="far fa-clock"></i> 90 мин</span>
+                            </div>
+                            <h3>Чистка матрицы зеркалки</h3>
+                            <p>Как безопасно почистить матрицу от пыли</p>
+                            <div class="guide-footer">
+                                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                                <a href="../guides/canon-sensor.html" class="button button--small">Читать</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="../img/camera-repair-2.jpg" alt="Замена дисплея">
+                            <span class="difficulty medium">Средняя сложность</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-meta">
+                                <span class="brand">Nikon</span>
+                                <span class="time"><i class="far fa-clock"></i> 45 мин</span>
+                            </div>
+                            <h3>Замена дисплея фотоаппарата</h3>
+                            <p>Пошаговая инструкция с фотографиями</p>
+                            <div class="guide-footer">
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                                <a href="../guides/nikon-screen.html" class="button button--small">Читать</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <section class="brands-section">
+                <h2>Ремонт по брендам</h2>
+                <div class="brands-grid">
+                    <a href="cameras-canon.html" class="brand-card">
+                        <img src="../img/brands/canon.png" alt="Canon">
+                    </a>
+                    <a href="cameras-nikon.html" class="brand-card">
+                        <img src="../img/brands/nikon.png" alt="Nikon">
+                    </a>
+                    <a href="cameras-sony.html" class="brand-card">
+                        <img src="../img/brands/sony.png" alt="Sony">
+                    </a>
+                    <a href="cameras-fujifilm.html" class="brand-card">
+                        <img src="../img/brands/fujifilm.png" alt="Fujifilm">
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Подвал -->
+    <script src="../app.js"></script>
+</body>
+</html>
