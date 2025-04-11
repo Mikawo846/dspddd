@@ -14,17 +14,18 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a href="/" class="logo">
+                <a href="index.html" class="logo">
                     <span class="logo__icon">🔧</span>
                     <span class="logo__text">TechFix</span>
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li><a href="#" class="nav__link">Телевизоры</a></li>
-                        <li><a href="#" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="#" class="nav__link">Игровые приставки</a></li>
-                        <li><a href="#" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="#" class="nav__link">Смартфоны</a></li>
+                        <li><a href="categories/tvs.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="categories/cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="categories/consoles.html" class="nav__link">Игровые приставки</a></li>
+                        <li><a href="categories/laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="categories/smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="contacts.html" class="nav__link">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="header__actions">
@@ -47,10 +48,10 @@
             <div class="container">
                 <div class="hero__content">
                     <h1 class="hero__title">Ремонт электроники без лишних сложностей</h1>
-                    <p class="hero__subtitle">Понятные инструкции для всех</p>
+                    <p class="hero__subtitle">Понятные инструкции для Казахстана</p>
                     <div class="hero__buttons">
                         <a href="#categories" class="button button--primary">Смотреть гайды</a>
-                        <a href="#" class="button button--secondary">Как это работает?</a>
+                        <a href="how-it-works.html" class="button button--secondary">Как это работает?</a>
                     </div>
                 </div>
                 <div class="hero__image">
@@ -63,15 +64,41 @@
             <div class="container">
                 <h2 class="section__title">Категории</h2>
                 <div class="categories__grid">
-                    <!-- Телевизоры -->
-                    <a href="#" class="category-card">
+                    <a href="categories/tvs.html" class="category-card">
                         <div class="category-card__icon">
                             <i class="fas fa-tv"></i>
                         </div>
                         <h3 class="category-card__title">Телевизоры</h3>
                         <p class="category-card__count">24 гайда</p>
                     </a>
-                    <!-- Остальные категории аналогично -->
+                    <a href="categories/cameras.html" class="category-card">
+                        <div class="category-card__icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 class="category-card__title">Фотоаппараты</h3>
+                        <p class="category-card__count">18 гайдов</p>
+                    </a>
+                    <a href="categories/consoles.html" class="category-card">
+                        <div class="category-card__icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="category-card__title">Игровые приставки</h3>
+                        <p class="category-card__count">12 гайдов</p>
+                    </a>
+                    <a href="categories/laptops.html" class="category-card">
+                        <div class="category-card__icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3 class="category-card__title">Ноутбуки</h3>
+                        <p class="category-card__count">32 гайда</p>
+                    </a>
+                    <a href="categories/smartphones.html" class="category-card">
+                        <div class="category-card__icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="category-card__title">Смартфоны</h3>
+                        <p class="category-card__count">28 гайдов</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -80,7 +107,7 @@
             <div class="container">
                 <div class="section__header">
                     <h2 class="section__title">Популярные гайды</h2>
-                    <a href="#" class="link">Смотреть все</a>
+                    <a href="all-guides.html" class="link">Смотреть все</a>
                 </div>
                 <div class="guides__grid">
                     <article class="guide-card">
@@ -99,10 +126,28 @@
                             </div>
                             <h3 class="guide-card__title">Как почистить ноутбук от пыли</h3>
                             <p class="guide-card__excerpt">Подробная инструкция для новичков с фото</p>
-                            <a href="#" class="button button--small">Читать</a>
+                            <a href="articles/clean-laptop.html" class="button button--small">Читать</a>
                         </div>
                     </article>
-                    <!-- Остальные гайды -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/guide2.jpg" alt="Ремонт телевизора">
+                            <span class="guide-card__badge">Топ</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span class="guide-card__rating">
+                                    <i class="fas fa-star"></i> 4.9
+                                </span>
+                                <span class="guide-card__time">
+                                    <i class="far fa-clock"></i> 8 мин
+                                </span>
+                            </div>
+                            <h3 class="guide-card__title">Ремонт разъема HDMI</h3>
+                            <p class="guide-card__excerpt">5 шагов для восстановления контактов</p>
+                            <a href="articles/repair-hdmi.html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -118,17 +163,17 @@
                 <div class="footer__col">
                     <h3 class="footer__title">Разделы</h3>
                     <ul class="footer__links">
-                        <li><a href="#" class="footer__link">Главная</a></li>
-                        <li><a href="#" class="footer__link">Гайды</a></li>
-                        <li><a href="#" class="footer__link">О проекте</a></li>
+                        <li><a href="index.html" class="footer__link">Главная</a></li>
+                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
+                        <li><a href="how-it-works.html" class="footer__link">Как это работает?</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
                     <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__links">
-                        <li><a href="#" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><a href="#" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="#" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
                     </ul>
                 </div>
             </div>
