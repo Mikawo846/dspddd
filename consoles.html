@@ -1,33 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ремонт приставок</title>
-  <link rel="stylesheet" href="styles.css" />
+    <!-- Такой же head как в tv.html -->
+    <title>Ремонт приставок | TechFix</title>
 </head>
 <body>
-  <nav><a href="index.html">Главная</a> → Игровые приставки</nav>
-  <h1>Ремонт игровых приставок</h1>
-  <img src="console-repair.jpg" alt="Ремонт приставок" />
-  <p>Инструкции по ремонту PlayStation, Xbox и других консолей.</p>
+    <header class="header">
+        <!-- Шапка -->
+    </header>
 
-  <h2>Частые проблемы</h2>
-  <ul>
-    <li><strong>Перегрев</strong> — <a href="#">Чистка системы охлаждения</a></li>
-    <li><strong>Не запускается игра</strong> — <a href="#">Диагностика накопителя</a></li>
-    <li><strong>Ошибки сети</strong> — <a href="#">Настройка подключения</a></li>
-    <li><strong>Контроллер не работает</strong> — <a href="#">Ремонт Bluetooth</a></li>
-  </ul>
+    <main class="category-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> → <span>Игровые приставки</span>
+            </div>
 
-  <h2>Гайды по ремонту</h2>
-  <select>
-    <option>По популярности</option>
-    <option>По новизне</option>
-  </select>
+            <h1 class="category-title">Ремонт игровых приставок</h1>
+            <p class="category-description">Ремонт PS, Xbox и Nintendo</p>
 
-  <div class="guide">
-    <img src="ps-repair.jpg" alt="Чистка PS5" />
-    <p><strong>Чистка PS5</strong><br />Сложный<br />⏱️ 50 мин</p>
-  </div>
+            <section class="common-problems">
+                <h2>Частые проблемы</h2>
+                <div class="problems-grid">
+                    <a href="guides/console-overheat.html" class="problem-card">
+                        <i class="fas fa-temperature-high"></i>
+                        <h3>Перегрев</h3>
+                        <p>Замена термопасты</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="guides-section">
+                <h2>Гайды по ремонту</h2>
+                <div class="guides-grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/console-repair.jpg" alt="Чистка PS4">
+                            <span class="difficulty-badge easy">Для начинающих</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3>Чистка PS4 от пыли</h3>
+                            <p>Полная разборка</p>
+                            <a href="guides/ps4-clean.html" class="button">Читать</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- Подвал -->
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
