@@ -1,34 +1,131 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ремонт телевизоров</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт телевизоров | TechFix</title>
+    <!-- Обязательные подключения -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav><a href="index.html">Главная</a> → Телевизоры</nav>
-  <h1>Ремонт телевизоров</h1>
-  <img src="tv-repair.jpg" alt="Ремонт телевизоров" />
-  <p>Инструкции по устранению распространённых неисправностей телевизоров всех типов.</p>
+    <!-- Шапка сайта (как в index.html) -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🔧</span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="consoles.html" class="nav__link">Игровые приставки</a></li>
+                        <li><a href="#" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="theme-toggle" aria-label="Переключить тему">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <h2>Частые проблемы</h2>
-  <ul>
-    <li><strong>Нет изображения</strong> — <a href="#">Проверка подсветки и платы</a></li>
-    <li><strong>Проблемы со звуком</strong> — <a href="#">Диагностика аудиомодуля</a></li>
-    <li><strong>Не включается</strong> — <a href="#">Ремонт блока питания</a></li>
-    <li><strong>Ошибки HDMI/USB</strong> — <a href="#">Замена разъёмов</a></li>
-  </ul>
+    <main class="category-page">
+        <div class="container">
+            <!-- Хлебные крошки -->
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> → <span>Телевизоры</span>
+            </div>
 
-  <h2>Гайды по ремонту</h2>
-  <select>
-    <option>По популярности</option>
-    <option>По новизне</option>
-  </select>
+            <!-- Ваш существующий контент -->
+            <h1>Ремонт телевизоров</h1>
+            <img src="img/tv-repair.jpg" alt="Ремонт телевизоров" class="category-banner">
+            <p class="category-description">Инструкции по устранению распространённых неисправностей телевизоров всех типов.</p>
 
-  <div class="guide">
-    <img src="tv-guide.jpg" alt="Ремонт подсветки" />
-    <p><strong>Подсветка экрана</strong><br />Samsung, LG<br />⏱️ 60 мин</p>
-  </div>
+            <section class="common-problems">
+                <h2>Частые проблемы</h2>
+                <div class="problems-grid">
+                    <a href="#" class="problem-card">
+                        <i class="fas fa-tv"></i>
+                        <h3>Нет изображения</h3>
+                        <p>Проверка подсветки и платы</p>
+                    </a>
+                    <a href="#" class="problem-card">
+                        <i class="fas fa-volume-up"></i>
+                        <h3>Проблемы со звуком</h3>
+                        <p>Диагностика аудиомодуля</p>
+                    </a>
+                    <a href="#" class="problem-card">
+                        <i class="fas fa-power-off"></i>
+                        <h3>Не включается</h3>
+                        <p>Ремонт блока питания</p>
+                    </a>
+                    <a href="#" class="problem-card">
+                        <i class="fas fa-plug"></i>
+                        <h3>Ошибки HDMI/USB</h3>
+                        <p>Замена разъёмов</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="guides-section">
+                <div class="section-header">
+                    <h2>Гайды по ремонту</h2>
+                    <div class="sort-options">
+                        <span>Сортировать:</span>
+                        <select>
+                            <option>По популярности</option>
+                            <option>По новизне</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="guides-grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/tv-guide.jpg" alt="Ремонт подсветки">
+                            <span class="difficulty medium">Средняя сложность</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-meta">
+                                <span class="brand">Samsung</span>
+                                <span class="time"><i class="far fa-clock"></i> 60 мин</span>
+                            </div>
+                            <h3>Ремонт подсветки экрана</h3>
+                            <p>Полное руководство по замене LED ленты</p>
+                            <div class="guide-footer">
+                                <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                                <a href="#" class="button button--small">Читать</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал сайта (как в index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__title">TechFix</h3>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <!-- Остальные колонки футера -->
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
-
