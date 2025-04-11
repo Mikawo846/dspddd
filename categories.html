@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Ремонт телевизоров | TechFix</title>
-    <link rel="stylesheet" href="../../styles.css">
+    <!-- Мета-теги -->
+    <title>Ремонт телевизоров - TechFix</title>
 </head>
 <body>
-    <!-- Шапка как в index.html -->
-    
+    <!-- Шапка -->
+
     <main class="category-page">
-        <div class="breadcrumbs">
-            <a href="/index.html">Главная</a> → <span>Телевизоры</span>
+        <div class="category-header">
+            <div class="breadcrumbs">
+                <a href="/">Главная</a> > <span>Телевизоры</span>
+            </div>
+            <h1><i class="fas fa-tv"></i> Ремонт телевизоров</h1>
+            <div class="category-filters">
+                <div class="filter">
+                    <label>Сложность:</label>
+                    <select>
+                        <option>Все</option>
+                        <option>Новичок</option>
+                        <option>Опытный</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label>Бренд:</label>
+                    <select>
+                        <option>Все</option>
+                        <option>Samsung</option>
+                        <option>LG</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
-        <h1>Ремонт телевизоров</h1>
-
-        <div class="subcategories">
-            <h2>Популярные проблемы:</h2>
-            <ul>
-                <li><a href="../articles/tv-no-power.html">Не включается</a></li>
-                <li><a href="../articles/tv-hdmi-issue.html">Не работает HDMI</a></li>
-                <li><a href="../articles/tv-backlight.html">Проблемы с подсветкой</a></li>
-            </ul>
-        </div>
-
-        <section class="article-list">
-            <article class="article-card">
-                <a href="../articles/tv-backlight-repair.html">
-                    <h3>Замена подсветки</h3>
-                    <p>Пошаговая инструкция с фото</p>
-                    <span class="article-meta">4.7 ★ | 15 мин</span>
+        <div class="problem-categories">
+            <h2>Частые проблемы</h2>
+            <div class="problems-grid">
+                <a href="articles/tv-no-power.html" class="problem-card">
+                    <div class="icon"><i class="fas fa-power-off"></i></div>
+                    <h3>Не включается</h3>
+                    <p>12 решений</p>
                 </a>
-            </article>
-            <!-- Другие статьи -->
-        </section>
+                <!-- Другие проблемы -->
+            </div>
+        </div>
+
+        <div class="all-guides">
+            <h2>Все гайды</h2>
+            <div class="guide-list">
+                <article class="guide">
+                    <div class="guide-meta">
+                        <span class="difficulty beginner">Легко</span>
+                        <span class="date">15.05.2024</span>
+                    </div>
+                    <h3><a href="articles/tv-hdmi-fix.html">Ремонт разъема HDMI</a></h3>
+                    <p class="excerpt">Как восстановить поврежденный порт за 7 шагов</p>
+                    <div class="stats">
+                        <span><i class="far fa-thumbs-up"></i> 89%</span>
+                        <span><i class="far fa-clock"></i> 25 мин</span>
+                    </div>
+                </article>
+                <!-- Другие гайды -->
+            </div>
+        </div>
     </main>
-    
-    <!-- Подвал как в index.html -->
 </body>
 </html>
