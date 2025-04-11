@@ -1,37 +1,65 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Контакты | TechFix</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Шапка как в index.html -->
+/* Новые стили для главной */
+.hero {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+    position: relative;
+    overflow: hidden;
+}
 
-    <main class="contacts-page">
-        <h1>Контакты</h1>
-        
-        <div class="contact-blocks">
-            <section class="contact-info">
-                <h2>Наши контакты</h2>
-                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:support@techfix.kz">support@techfix.kz</a></p>
-                <p><i class="fas fa-phone"></i> Телефон: +7 (777) 123-45-67</p>
-                <p><i class="fas fa-map-marker-alt"></i> Адрес: г. Алматы, ул. Техническая, 12</p>
-            </section>
-            
-            <section class="contact-form">
-                <h2>Обратная связь</h2>
-                <form id="feedback-form">
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Ваш вопрос" rows="5" required></textarea>
-                    <button type="submit" class="button button--primary">Отправить</button>
-                </form>
-            </section>
-        </div>
-    </main>
+.hero:after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 0L0 0 892.25 114.72 1200 0z" fill="%23fff"></path></svg>');
+    background-size: cover;
+}
 
-    <!-- Подвал как в index.html -->
-    <script src="app.js"></script>
-</body>
-</html>
+.search-bar {
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Стили для страницы статьи */
+.article-page {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+}
+
+.step {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+}
+
+.warning-box {
+    background: #fff8e6;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .article-page {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+    }
+}
