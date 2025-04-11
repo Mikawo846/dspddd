@@ -1,65 +1,83 @@
-/* Новые стили для главной */
-.hero {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
-    position: relative;
-    overflow: hidden;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Мета-теги -->
+    <title>Контакты - TechFix</title>
+</head>
+<body>
+    <!-- Шапка -->
 
-.hero:after {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 0L0 0 892.25 114.72 1200 0z" fill="%23fff"></path></svg>');
-    background-size: cover;
-}
+    <main class="contacts-page">
+        <h1><i class="fas fa-headset"></i> Наши контакты</h1>
+        
+        <div class="contacts-grid">
+            <section class="contact-info">
+                <div class="contact-card">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Адрес</h3>
+                    <p>г. Алматы, ул. Техническая, 12</p>
+                    <a href="#" class="map-link">Посмотреть на карте →</a>
+                </div>
 
-.search-bar {
-    max-width: 600px;
-    margin: 30px auto;
-    position: relative;
-}
+                <div class="contact-card">
+                    <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Телефоны</h3>
+                    <p>+7 (777) 123-45-67</p>
+                    <p>+7 (727) 987-65-43</p>
+                </div>
 
-.search-bar input {
-    width: 100%;
-    padding: 15px 20px;
-    border-radius: 50px;
-    border: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+                <div class="contact-card">
+                    <div class="icon"><i class="far fa-clock"></i></div>
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 18:00</p>
+                    <p>Сб: 10:00 - 15:00</p>
+                </div>
+            </section>
 
-/* Стили для страницы статьи */
-.article-page {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 40px;
-}
+            <section class="contact-form-section">
+                <h2><i class="far fa-envelope"></i> Форма обратной связи</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Тема</label>
+                        <select>
+                            <option>Техническая поддержка</option>
+                            <option>Сотрудничество</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Сообщение</label>
+                        <textarea rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i> Отправить
+                    </button>
+                </form>
+            </section>
+        </div>
 
-.step {
-    margin-bottom: 40px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid var(--border);
-}
-
-.warning-box {
-    background: #fff8e6;
-    border-left: 4px solid #ffc107;
-    padding: 15px;
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .article-page {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero-stats {
-        flex-direction: column;
-    }
-}
+        <section class="team-section">
+            <h2>Наша команда</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="assets/img/team/tech1.jpg" alt="Специалист">
+                    <h3>Алексей</h3>
+                    <p>Телевизоры и мониторы</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <!-- Другие сотрудники -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>
