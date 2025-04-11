@@ -76,15 +76,28 @@ body[data-theme="dark"] {
     background: rgba(67, 97, 238, 0.1);
 }
 
-/* Хедер */
-.header {
-    background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-    position: sticky;
-    top: 0;
-    background: var(--background);
-    box-shadow: var(--shadow);
-    z-index: 100;
-    transition: background 0.3s;
+  background: linear-gradient(135deg, 
+    #4361ee 0%, 
+    #3a0ca3 70%, 
+    #7209b7 100%);
+  background-size: 200% 200%;
+  animation: gradientBG 8s ease infinite;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Для темной темы */
+[data-theme="dark"] .header {
+  background: linear-gradient(135deg, 
+    #212529 0%, 
+    #343a40 50%, 
+    #495057 100%);
 }
 
 body[data-theme="dark"] .header {
