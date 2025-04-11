@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт телевизоров | TechFix</title>
-    <!-- Подключение стилей -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Обязательные стили -->
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка -->
+    <!-- Шапка (копия из cameras.html) -->
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a href="index.html" class="logo">
+                <a href="./index.html" class="logo">
                     <span class="logo__icon">🔧</span>
                     <span class="logo__text">TechFix</span>
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li><a href="tv.html" class="nav__link active">Телевизоры</a></li>
-                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="consoles.html" class="nav__link">Игровые приставки</a></li>
-                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="./tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="./cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="./consoles.html" class="nav__link">Игровые приставки</a></li>
+                        <li><a href="./laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="./smartphones.html" class="nav__link">Смартфоны</a></li>
                     </ul>
                 </nav>
                 <div class="header__actions">
@@ -36,43 +36,43 @@
         </div>
     </header>
 
+    <!-- Основное содержимое -->
     <main class="category-page">
         <div class="container">
-            <!-- Хлебные крошки -->
             <div class="breadcrumbs">
-                <a href="index.html">Главная</a> → <span>Телевизоры</span>
+                <a href="./index.html">Главная</a> → <span>[Категория]</span>
             </div>
 
-            <!-- Заголовок и описание -->
             <h1 class="category-title">Ремонт телевизоров</h1>
-            <p class="category-description">Инструкции по устранению распространённых неисправностей телевизоров всех типов.</p>
+            <img src="./img/tv-banner.jpg" alt="Ремонт телевизоров" class="category-banner">
+            <p class="category-description">Профессиональный ремонт LED, OLED и QLED телевизоров</p>
 
-            <!-- Блок с проблемами -->
+
             <section class="common-problems">
                 <h2>Частые проблемы</h2>
                 <div class="problems-grid">
-                    <a href="guides/tv-no-image.html" class="problem-card">
-                        <i class="fas fa-tv"></i>
-                        <h3>Нет изображения</h3>
-                        <p>Проверка подсветки и платы</p>
+                    <!-- Пример карточки (повторите для каждой проблемы) -->
+                    <a href="./guides/[категория]-[проблема].html" class="problem-card">
+                        <i class="fas fa-[иконка]"></i>
+                        <h3>[Проблема]</h3>
+                        <p>[Решение]</p>
                     </a>
-                    <!-- Остальные карточки проблем -->
                 </div>
             </section>
 
-            <!-- Гайды -->
             <section class="guides-section">
                 <h2>Гайды по ремонту</h2>
                 <div class="guides-grid">
+                    <!-- Пример гайда (повторите для каждого гайда) -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="img/tv-repair-guide.jpg" alt="Ремонт подсветки">
-                            <span class="difficulty-badge medium">Средняя сложность</span>
+                            <img src="./img/[категория]-guide1.jpg" alt="Гайд">
+                            <span class="difficulty easy">Для начинающих</span>
                         </div>
                         <div class="guide-card__content">
-                            <h3>Замена подсветки LED</h3>
-                            <p>Пошаговая инструкция с фото</p>
-                            <a href="guides/tv-backlight.html" class="button">Читать</a>
+                            <h3>[Название гайда]</h3>
+                            <p>[Описание]</p>
+                            <a href="./guides/[гайд].html" class="button button--small">Читать</a>
                         </div>
                     </article>
                 </div>
@@ -80,11 +80,22 @@
         </div>
     </main>
 
-    <!-- Подвал -->
+    <!-- Подвал (копия из cameras.html) -->
     <footer class="footer">
-        <!-- Ваш футер -->
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__title">TechFix</h3>
+                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
+                </div>
+                <!-- Остальные колонки футера -->
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
