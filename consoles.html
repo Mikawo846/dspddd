@@ -1,125 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Ремонт игровых приставок | TechFix</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <title>Ремонт приставок</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Шапка -->
-    
-    <main class="category-page">
-        <div class="container">
-            <div class="breadcrumbs">
-                <a href="../index.html">Главная</a> → <span>Игровые приставки</span>
-            </div>
+  <nav><a href="index.html">Главная</a> → Игровые приставки</nav>
+  <h1>Ремонт игровых приставок</h1>
+  <img src="console-repair.jpg" alt="Ремонт приставок" />
+  <p>Инструкции по ремонту PlayStation, Xbox и других консолей.</p>
 
-            <h1 class="category-title">Ремонт игровых приставок</h1>
-            
-            <div class="category-header">
-                <img src="../img/consoles-banner.jpg" alt="Ремонт приставок" class="category-banner">
-                <p class="category-description">Подробные инструкции по ремонту игровых консолей. От чистки до замены термопасты и ремонта дисководов.</p>
-            </div>
+  <h2>Частые проблемы</h2>
+  <ul>
+    <li><strong>Перегрев</strong> — <a href="#">Чистка системы охлаждения</a></li>
+    <li><strong>Не запускается игра</strong> — <a href="#">Диагностика накопителя</a></li>
+    <li><strong>Ошибки сети</strong> — <a href="#">Настройка подключения</a></li>
+    <li><strong>Контроллер не работает</strong> — <a href="#">Ремонт Bluetooth</a></li>
+  </ul>
 
-            <section class="common-problems">
-                <h2>Частые проблемы</h2>
-                <div class="problems-grid">
-                    <a href="../guides/console-overheat.html" class="problem-card">
-                        <i class="fas fa-temperature-high"></i>
-                        <h3>Перегрев</h3>
-                        <p>Чистка и замена термопасты</p>
-                    </a>
-                    <a href="../guides/console-disc.html" class="problem-card">
-                        <i class="fas fa-compact-disc"></i>
-                        <h3>Не читает диски</h3>
-                        <p>Ремонт дисковода</p>
-                    </a>
-                    <a href="../guides/console-no-power.html" class="problem-card">
-                        <i class="fas fa-plug"></i>
-                        <h3>Не включается</h3>
-                        <p>Диагностика блока питания</p>
-                    </a>
-                    <a href="../guides/console-hdmi.html" class="problem-card">
-                        <i class="fas fa-tv"></i>
-                        <h3>Нет изображения</h3>
-                        <p>Ремонт HDMI выхода</p>
-                    </a>
-                </div>
-            </section>
+  <h2>Гайды по ремонту</h2>
+  <select>
+    <option>По популярности</option>
+    <option>По новизне</option>
+  </select>
 
-            <section class="guides-section">
-                <div class="section-header">
-                    <h2>Гайды по ремонту</h2>
-                    <div class="sort-options">
-                        <span>Сортировать:</span>
-                        <select>
-                            <option>По популярности</option>
-                            <option>По новизне</option>
-                            <option>По сложности</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="guides-grid">
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="../img/console-repair-1.jpg" alt="Чистка PS4">
-                            <span class="difficulty easy">Для начинающих</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <div class="guide-meta">
-                                <span class="brand">PlayStation</span>
-                                <span class="time"><i class="far fa-clock"></i> 40 мин</span>
-                            </div>
-                            <h3>Полная чистка PS4 от пыли</h3>
-                            <p>Как разобрать и почистить консоль от пыли</p>
-                            <div class="guide-footer">
-                                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
-                                <a href="../guides/ps4-clean.html" class="button button--small">Читать</a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="../img/console-repair-2.jpg" alt="Замена термопасты">
-                            <span class="difficulty medium">Средняя сложность</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <div class="guide-meta">
-                                <span class="brand">Xbox</span>
-                                <span class="time"><i class="far fa-clock"></i> 60 мин</span>
-                            </div>
-                            <h3>Замена термопасты в Xbox One</h3>
-                            <p>Подробный гайд с фотографиями каждого шага</p>
-                            <div class="guide-footer">
-                                <span class="rating"><i class="fas fa-star"></i> 4.7</span>
-                                <a href="../guides/xbox-thermal.html" class="button button--small">Читать</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            
-            <section class="brands-section">
-                <h2>Ремонт по брендам</h2>
-                <div class="brands-grid">
-                    <a href="consoles-ps.html" class="brand-card">
-                        <img src="../img/brands/playstation.png" alt="PlayStation">
-                    </a>
-                    <a href="consoles-xbox.html" class="brand-card">
-                        <img src="../img/brands/xbox.png" alt="Xbox">
-                    </a>
-                    <a href="consoles-nintendo.html" class="brand-card">
-                        <img src="../img/brands/nintendo.png" alt="Nintendo">
-                    </a>
-                </div>
-            </section>
-        </div>
-    </main>
-    
-    <!-- Подвал -->
-    <script src="../app.js"></script>
+  <div class="guide">
+    <img src="ps-repair.jpg" alt="Чистка PS5" />
+    <p><strong>Чистка PS5</strong><br />Сложный<br />⏱️ 50 мин</p>
+  </div>
 </body>
 </html>
