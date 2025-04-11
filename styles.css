@@ -766,4 +766,26 @@ body[data-theme="dark"] .theme-toggle {
   height: 2px;
   background: var(--primary);
  }
+    /* Главная шапка с градиентом */
+.header {
+  background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%) !important;
+  background-size: 200% 200%;
+  animation: headerGradient 8s ease infinite;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* Анимация градиента */
+@keyframes headerGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background_position: 0% 50%; }
+}
+
+/* Для тёмной темы */
+[data-theme="dark"] .header {
+  background: linear-gradient(135deg, 
+    #212529 0%, 
+    #343a40 50%, 
+    #495057 100%) !important;
+ }
 }
