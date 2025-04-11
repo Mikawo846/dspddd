@@ -1,128 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Ремонт смартфонов | TechFix</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <title>Ремонт смартфонов</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Шапка -->
-    
-    <main class="category-page">
-        <div class="container">
-            <div class="breadcrumbs">
-                <a href="../index.html">Главная</a> → <span>Смартфоны</span>
-            </div>
+  <nav><a href="index.html">Главная</a> → Смартфоны</nav>
+  <h1>Ремонт смартфонов</h1>
+  <img src="phone-repair.jpg" alt="Ремонт смартфонов" />
+  <p>Руководства по ремонту популярных моделей смартфонов. От замены экрана до восстановления ПО.</p>
 
-            <h1 class="category-title">Ремонт смартфонов</h1>
-            
-            <div class="category-header">
-                <img src="../img/phones-banner.jpg" alt="Ремонт смартфонов" class="category-banner">
-                <p class="category-description">Подробные инструкции по ремонту смартфонов и планшетов. От замены экрана до ремонта материнской платы.</p>
-            </div>
+  <h2>Частые проблемы</h2>
+  <ul>
+    <li><strong>Разбит экран</strong> — <a href="#">Инструкция по замене</a></li>
+    <li><strong>Не заряжается</strong> — <a href="#">Проверка разъёма</a></li>
+    <li><strong>Греется</strong> — <a href="#">Причины и решения</a></li>
+    <li><strong>Зависает</strong> — <a href="#">Сброс и перепрошивка</a></li>
+  </ul>
 
-            <section class="common-problems">
-                <h2>Частые проблемы</h2>
-                <div class="problems-grid">
-                    <a href="../guides/phone-screen.html" class="problem-card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3>Разбитый экран</h3>
-                        <p>Замена дисплея и тачскрина</p>
-                    </a>
-                    <a href="../guides/phone-battery.html" class="problem-card">
-                        <i class="fas fa-battery-quarter"></i>
-                        <h3>Быстро разряжается</h3>
-                        <p>Замена аккумулятора</p>
-                    </a>
-                    <a href="../guides/phone-charge.html" class="problem-card">
-                        <i class="fas fa-charging-station"></i>
-                        <h3>Не заряжается</h3>
-                        <p>Ремонт разъёма и контроллера</p>
-                    </a>
-                    <a href="../guides/phone-water.html" class="problem-card">
-                        <i class="fas fa-tint"></i>
-                        <h3>Попадание воды</h3>
-                        <p>Просушка и восстановление</p>
-                    </a>
-                </div>
-            </section>
+  <h2>Гайды по ремонту</h2>
+  <select>
+    <option>По популярности</option>
+    <option>По новизне</option>
+  </select>
 
-            <section class="guides-section">
-                <div class="section-header">
-                    <h2>Гайды по ремонту</h2>
-                    <div class="sort-options">
-                        <span>Сортировать:</span>
-                        <select>
-                            <option>По популярности</option>
-                            <option>По новизне</option>
-                            <option>По сложности</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="guides-grid">
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="../img/phone-repair-1.jpg" alt="Замена экрана">
-                            <span class="difficulty easy">Для начинающих</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <div class="guide-meta">
-                                <span class="brand">iPhone</span>
-                                <span class="time"><i class="far fa-clock"></i> 30 мин</span>
-                            </div>
-                            <h3>Замена экрана iPhone 11</h3>
-                            <p>Пошаговая инструкция с фотографиями и советами</p>
-                            <div class="guide-footer">
-                                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
-                                <a href="../guides/iphone-screen.html" class="button button--small">Читать</a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="../img/phone-repair-2.jpg" alt="Замена батареи">
-                            <span class="difficulty easy">Для начинающих</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <div class="guide-meta">
-                                <span class="brand">Samsung</span>
-                                <span class="time"><i class="far fa-clock"></i> 20 мин</span>
-                            </div>
-                            <h3>Замена аккумулятора Galaxy S20</h3>
-                            <p>Как безопасно заменить батарею без повреждений</p>
-                            <div class="guide-footer">
-                                <span class="rating"><i class="fas fa-star"></i> 4.6</span>
-                                <a href="../guides/samsung-battery.html" class="button button--small">Читать</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            
-            <section class="brands-section">
-                <h2>Ремонт по брендам</h2>
-                <div class="brands-grid">
-                    <a href="phones-iphone.html" class="brand-card">
-                        <img src="../img/brands/iphone.png" alt="iPhone">
-                    </a>
-                    <a href="phones-samsung.html" class="brand-card">
-                        <img src="../img/brands/samsung.png" alt="Samsung">
-                    </a>
-                    <a href="phones-xiaomi.html" class="brand-card">
-                        <img src="../img/brands/xiaomi.png" alt="Xiaomi">
-                    </a>
-                    <a href="phones-huawei.html" class="brand-card">
-                        <img src="../img/brands/huawei.png" alt="Huawei">
-                    </a>
-                </div>
-            </section>
-        </div>
-    </main>
-    
-    <!-- Подвал -->
-    <script src="../app.js"></script>
+  <div class="guide">
+    <img src="screen-replace.jpg" alt="Замена экрана" />
+    <p><strong>Замена дисплея</strong><br />iPhone 12, Xiaomi<br />⏱️ 40 мин</p>
+  </div>
 </body>
 </html>
