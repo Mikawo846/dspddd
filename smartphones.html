@@ -3,34 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Название категории | TechFix</title>
-    <!-- Обязательные подключения -->
-    <link rel="stylesheet" href="/styles.css">
+    <title>Ремонт смартфонов | TechFix</title>
+    <!-- Обязательные стили -->
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Проверочный стиль -->
-    <style>
-        body { font-family: 'Inter', sans-serif; margin: 0; }
-        .header { background: #4361ee; color: white; padding: 15px 0; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    </style>
 </head>
 <body>
-    <!-- Шапка (скопируйте из index.html) -->
+    <!-- Шапка (копия из cameras.html) -->
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a href="index.html" class="logo">
+                <a href="./index.html" class="logo">
                     <span class="logo__icon">🔧</span>
                     <span class="logo__text">TechFix</span>
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="consoles.html" class="nav__link active">Игровые приставки</a></li>
-                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="./tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="./cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="./consoles.html" class="nav__link">Игровые приставки</a></li>
+                        <li><a href="./laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="./smartphones.html" class="nav__link">Смартфоны</a></li>
                     </ul>
                 </nav>
                 <div class="header__actions">
@@ -42,31 +36,50 @@
         </div>
     </header>
 
+    <!-- Основное содержимое -->
     <main class="category-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="index.html">Главная</a> → <span>Название категории</span>
+                <a href="./index.html">Главная</a> → <span>[Категория]</span>
             </div>
 
-            <h1>Ремонт [Название категории]</h1>
-            <img src="img/[image-name].jpg" alt="Ремонт" class="category-banner">
-            <p>Описание категории</p>
+            <h1 class="category-title">Ремонт смартфонов</h1>
+            <img src="./img/smartphones-banner.jpg" alt="Ремонт смартфонов" class="category-banner">
+            <p class="category-description">Ремонт iPhone и Android-устройств</p>
 
             <section class="common-problems">
                 <h2>Частые проблемы</h2>
                 <div class="problems-grid">
-                    <!-- Пример карточки проблемы -->
-                    <a href="guides/guide-name.html" class="problem-card">
-                        <i class="fas fa-[icon]"></i>
-                        <h3>Название проблемы</h3>
-                        <p>Описание решения</p>
+                    <!-- Пример карточки (повторите для каждой проблемы) -->
+                    <a href="./guides/[категория]-[проблема].html" class="problem-card">
+                        <i class="fas fa-[иконка]"></i>
+                        <h3>[Проблема]</h3>
+                        <p>[Решение]</p>
                     </a>
+                </div>
+            </section>
+
+            <section class="guides-section">
+                <h2>Гайды по ремонту</h2>
+                <div class="guides-grid">
+                    <!-- Пример гайда (повторите для каждого гайда) -->
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="./img/[категория]-guide1.jpg" alt="Гайд">
+                            <span class="difficulty easy">Для начинающих</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3>[Название гайда]</h3>
+                            <p>[Описание]</p>
+                            <a href="./guides/[гайд].html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- Подвал (скопируйте из index.html) -->
+    <!-- Подвал (копия из cameras.html) -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -76,9 +89,12 @@
                 </div>
                 <!-- Остальные колонки футера -->
             </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="/app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
