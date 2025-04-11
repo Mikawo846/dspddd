@@ -1,42 +1,62 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <title>Ремонт фотоаппаратов</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт фотоаппаратов | TechFix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Главная</a> → <a href="categories.html">Фотоаппараты</a>
-  </nav>
+    <header class="header">
+        <!-- Такая же шапка как в tv.html -->
+    </header>
 
-  <h1>Ремонт фотоаппаратов</h1>
+    <main class="category-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> → <span>Фотоаппараты</span>
+            </div>
 
-  <img src="img/camera-repair.jpg" alt="Ремонт фотоаппаратов" />
+            <h1 class="category-title">Ремонт фотоаппаратов</h1>
+            <p class="category-description">Профессиональный ремонт зеркальных и беззеркальных камер</p>
 
-  <p>Подробные инструкции по ремонту зеркальных и беззеркальных камер. От чистки матрицы до ремонта механики.</p>
+            <section class="common-problems">
+                <h2>Частые проблемы</h2>
+                <div class="problems-grid">
+                    <a href="guides/camera-sensor.html" class="problem-card">
+                        <i class="fas fa-camera"></i>
+                        <h3>Пятна на матрице</h3>
+                        <p>Чистка сенсора</p>
+                    </a>
+                    <!-- Другие проблемы -->
+                </div>
+            </section>
 
-  <h2>Частые проблемы</h2>
+            <section class="guides-section">
+                <h2>Гайды по ремонту</h2>
+                <div class="guides-grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/camera-repair.jpg" alt="Чистка матрицы">
+                            <span class="difficulty-badge medium">Средняя сложность</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <h3>Чистка матрицы</h3>
+                            <p>Безопасное удаление пыли</p>
+                            <a href="guides/camera-sensor-clean.html" class="button">Читать</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
 
-  <ul>
-    <li>📷 <a href="#">Пятна на снимках</a> — <a href="#">Чистка матрицы</a></li>
-    <li>🔧 <a href="#">Не выезжает объектив</a> — <a href="#">Ремонт механики</a></li>
-    <li>📷 <a href="#">Не фокусируется</a> — <a href="#">Настройка автофокуса</a></li>
-    <li>⚠️ <a href="#">Ошибки камеры</a> — <a href="#">Диагностика и решение</a></li>
-  </ul>
+    <footer class="footer">
+        <!-- Такой же подвал как в tv.html -->
+    </footer>
 
-  <h2>Гайды по ремонту</h2>
-
-  <label>Сортировать: 
-    <select>
-      <option>По популярности</option>
-      <option>По сложности</option>
-    </select>
-  </label>
-
-  <div class="guide">
-    <img src="img/canon-clean.jpg" alt="Чистка матрицы" />
-    <p>Чистка матрицы <strong>Сложный</strong><br>Canon ⏱ 90 мин</p>
-  </div>
+    <script src="app.js"></script>
 </body>
 </html>
