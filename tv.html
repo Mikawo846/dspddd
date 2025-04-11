@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт телевизоров | TechFix</title>
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка как в index.html -->
-    
+    <!-- Шапка (как в index.html) -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🔧</span>
+                    <span class="logo__text">TechFix</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
+                        <li><a href="consoles.html" class="nav__link">Игровые приставки</a></li>
+                        <li><a href="#" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="theme-toggle" aria-label="Переключить тему">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <main class="category-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="../index.html">Главная</a> → <span>Телевизоры</span>
+                <a href="index.html">Главная</a> → <span>Телевизоры</span>
             </div>
 
             <h1 class="category-title">Ремонт телевизоров</h1>
             
             <div class="category-header">
-                <img src="../img/tv-banner.jpg" alt="Ремонт телевизоров" class="category-banner">
                 <p class="category-description">Подробные инструкции по ремонту телевизоров различных марок и моделей. От простых проблем до сложного ремонта.</p>
             </div>
 
             <section class="common-problems">
                 <h2>Частые проблемы</h2>
                 <div class="problems-grid">
-                    <a href="../guides/tv-no-power.html" class="problem-card">
+                    <a href="guides/tv-no-power.html" class="problem-card">
                         <i class="fas fa-power-off"></i>
                         <h3>Не включается</h3>
                         <p>Решения для проблем с питанием</p>
                     </a>
-                    <a href="../guides/tv-no-image.html" class="problem-card">
+                    <a href="guides/tv-no-image.html" class="problem-card">
                         <i class="fas fa-tv"></i>
                         <h3>Нет изображения</h3>
                         <p>Диагностика и ремонт</p>
                     </a>
-                    <!-- Другие частые проблемы -->
                 </div>
             </section>
 
@@ -49,7 +71,6 @@
                         <select>
                             <option>По популярности</option>
                             <option>По новизне</option>
-                            <option>По сложности</option>
                         </select>
                     </div>
                 </div>
@@ -57,7 +78,7 @@
                 <div class="guides-grid">
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="../img/tv-repair-1.jpg" alt="Замена подсветки">
+                            <img src="img/tv-repair.jpg" alt="Замена подсветки">
                             <span class="difficulty easy">Для начинающих</span>
                         </div>
                         <div class="guide-card__content">
@@ -69,31 +90,34 @@
                             <p>Пошаговая инструкция с фотографиями каждого этапа работы</p>
                             <div class="guide-footer">
                                 <span class="rating"><i class="fas fa-star"></i> 4.8</span>
-                                <a href="../guides/tv-backlight.html" class="button button--small">Читать</a>
+                                <a href="guides/tv-backlight.html" class="button button--small">Читать</a>
                             </div>
                         </div>
                     </article>
-                    
-                    <!-- Другие гайды -->
                 </div>
             </section>
             
             <section class="brands-section">
                 <h2>Ремонт по брендам</h2>
                 <div class="brands-grid">
-                    <a href="tv-samsung.html" class="brand-card">
-                        <img src="../img/brands/samsung.png" alt="Samsung">
+                    <a href="brands/samsung-tv.html" class="brand-card">
+                        <img src="img/brands/samsung.png" alt="Samsung">
                     </a>
-                    <a href="tv-lg.html" class="brand-card">
-                        <img src="../img/brands/lg.png" alt="LG">
+                    <a href="brands/lg-tv.html" class="brand-card">
+                        <img src="img/brands/lg.png" alt="LG">
                     </a>
-                    <!-- Другие бренды -->
                 </div>
             </section>
         </div>
     </main>
     
-    <!-- Подвал как в index.html -->
-    <script src="../app.js"></script>
+    <!-- Подвал (как в index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <!-- ... содержимое футера ... -->
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
