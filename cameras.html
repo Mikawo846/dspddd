@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт фотоаппаратов | TechFix</title>
+    <title>Ремонт телевизоров | TechFix</title>
+    <!-- Обязательные стили -->
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка с активной вкладкой "Фотоаппараты" -->
+    <!-- Шапка (копия из cameras.html) -->
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -20,7 +21,7 @@
                 <nav class="nav">
                     <ul class="nav__list">
                         <li><a href="./tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="./cameras.html" class="nav__link active">Фотоаппараты</a></li> <!-- АКТИВНАЯ ВКЛАДКА -->
+                        <li><a href="./cameras.html" class="nav__link">Фотоаппараты</a></li>
                         <li><a href="./consoles.html" class="nav__link">Игровые приставки</a></li>
                         <li><a href="./laptops.html" class="nav__link">Ноутбуки</a></li>
                         <li><a href="./smartphones.html" class="nav__link">Смартфоны</a></li>
@@ -35,96 +36,43 @@
         </div>
     </header>
 
+    <!-- Основное содержимое -->
     <main class="category-page">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="./index.html">Главная</a> → <span>Фотоаппараты</span>
+                <a href="./index.html">Главная</a> → <span>[Категория]</span>
             </div>
 
-            <!-- В основном контенте после breadcrumbs -->
-<h1 class="page-title">Гайды по ремонту фотоаппаратов</h1>
+            <h1 class="category-title">Ремонт телевизоров</h1>
+            <img src="./img/tv-banner.jpg" alt="Ремонт телевизоров" class="category-banner">
+            <p class="category-description">Профессиональный ремонт LED, OLED и QLED телевизоров</p>
 
-<div class="category-guides">
-    <!-- Гайд: Название гайда -->
-  <section class="custom-guide-section">
-    <article class="custom-guide-card">
-      <div class="custom-guide-header">
-        <h2 id="sensor-cleaning">Чистка матрицы фотоаппарата</h2>
-        <div class="custom-guide-meta">
-          <span class="custom-difficulty medium">Легко</span>
-          <span><i class="far fa-clock"></i>10</span>
-        </div>
-      </div>
-  
-      <div class="custom-guide-content">
-        <img src="img/sensor-clean.jpg" alt="Чистка матрицы" class="custom-guide-image">
-  
-        <div class="custom-tools-needed">
-          <h3><i class="fas fa-tools"></i> Что понадобится:Подготовка
-            Убедитесь, что это необходимо – если на снимках видны пятна (особенно при закрытой диафрагме, например, f/16), значит, на матрице есть пыль.
-            
-            Используйте грушу или щётку – иногда пыль можно удалить без контакта с матрицей.
-            
-            Зарядите аккумулятор – чтобы камера не выключилась во время чистки.</h3>
-          <ul>
-            <li>Набор для чистки матрицы (VSGO)</li>
-            <li>Безворсовые тампоны</li>
-            <li>Чистящая жидкость Eclipse</li>
-          </ul>
-        </div>
-  
-        <div class="custom-guide-steps">
-          <h3><i class="fas fa-list-ol"></i> Инструкция:</h3>
-          
-          <div class="custom-step">
-            <div class="custom-step-number">1</div>
-            <div class="custom-step-text">Вариант 1. Сухая чистка (если пыль)
-              Включите камеру, зайдите в меню и выберите "Очистка матрицы" (если есть).
-              
-              Переведите камеру в ручной режим очистки (для зеркалок – через меню, для беззеркалок – иногда нужно снять объектив).
-              
-              Переверните камеру сенсором вниз, аккуратно сдуйте пыль грушей (не касаясь матрицы!).</div>
-          </div>
-          
-          <div class="custom-step">
-            <div class="custom-step-number">2</div>
-            <div class="custom-step-text">Вариант 2. Влажная чистка (если пятна, жирные следы)
-              Нанесите 1-2 капли чистящей жидкости на тампон (не на матрицу!).
-              
-              Аккуратно проведите тампоном по матрице в одном направлении (не давите!).
-              
-              Дайте пару секунд на испарение жидкости.
-              
-              Если остались разводы – повторите новым тампоном.</div>
-          </div>
-        </div>
-  
-        <div class="custom-guide-warning">
-          <i class="fas fa-exclamation-triangle"></i>
-          <div>
-            <p><strong>Важно!</strong> Не чистите матрицу часто без необходимости.
 
-              В беззеркальных камерах сенсор более уязвим – будьте осторожны.
-              
-              Если не уверены – лучше отдать в сервис.</p>
-          </div>
-        </div>
-      </div>
-    </article>
+            <section class="common-problems">
+                <h2>Частые проблемы</h2>
+                <div class="problems-grid">
+                    <!-- Пример карточки (повторите для каждой проблемы) -->
+                    <a href="./guides/[категория]-[проблема].html" class="problem-card">
+                        <i class="fas fa-[иконка]"></i>
+                        <h3>[Проблема]</h3>
+                        <p>[Решение]</p>
+                    </a>
+                </div>
             </section>
 
             <section class="guides-section">
                 <h2>Гайды по ремонту</h2>
                 <div class="guides-grid">
+                    <!-- Пример гайда (повторите для каждого гайда) -->
                     <article class="guide-card">
                         <div class="guide-card__image">
-                            <img src="./img/camera-repair-guide.jpg" alt="Чистка матрицы">
-                            <span class="difficulty-badge medium">Средняя сложность</span>
+                            <img src="./img/[категория]-guide1.jpg" alt="Гайд">
+                            <span class="difficulty easy">Для начинающих</span>
                         </div>
                         <div class="guide-card__content">
-                            <h3>Чистка матрицы</h3>
-                            <p>Безопасное удаление пыли</p>
-                            <a href="./guides/camera-sensor-clean.html" class="button">Читать</a>
+                            <h3>[Название гайда]</h3>
+                            <p>[Описание]</p>
+                            <a href="./guides/[гайд].html" class="button button--small">Читать</a>
                         </div>
                     </article>
                 </div>
@@ -132,6 +80,7 @@
         </div>
     </main>
 
+    <!-- Подвал (копия из cameras.html) -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -139,16 +88,17 @@
                     <h3 class="footer__title">TechFix</h3>
                     <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
                 </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="tel:+77771234567" class="footer__link"><i class="fas fa-phone"></i> +7 (777) 123-45-67</a></li>
-                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> support@techfix.kz</a></li>
-                    </ul>
-                </div>
+                <!-- Остальные колонки футера -->
             </div>
             <div class="footer__bottom">
                 <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>
             </div>
         </div>
     </footer>
