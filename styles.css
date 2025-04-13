@@ -1,303 +1,803 @@
-<!DOCTYPE html>
-<html lang="ru" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechFix – Ремонт электроники в Казахстане</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="index.html" class="logo">
-                    <span class="logo__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                            <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                        </svg>
-                    </span>
-                    <span class="logo__text">TechFix</span>
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
-                    </ul>
-                </nav>
-                <div class="header__actions">
-                    <button class="theme-toggle" aria-label="Переключить тему">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
+:root {
+    /* Цветовая палитра */
+    --primary: #034a4f;
+    --primary-dark: #02373b;
+    --primary-light: rgba(3, 74, 79, 0.1);
+    --secondary: #6b9a9a;
+    --accent: #cae4df;
+    --light-accent: #f7fadb;
+    --light-bg: #f7f7d9;
+    --background: #f4f4f4;
+    --background-alt: #ffffff;
+    --border: #e0e0e0;
+    --text: #2b2d42;
+    --text-light: #5a5a5a;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+    --elegant-shadow: 0 8px 32px rgba(3, 74, 79, 0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --border-radius: 12px;
+    
+    /* Темная тема */
+    --dark-background: #1E1E1E;
+    --dark-background-alt: #2D2D2D;
+    --dark-text: #E0E0E0;
+    --dark-border: #444;
+}
 
-    <div class="search-section">
-        <div class="container">
-            <div class="search-wrapper">
-                <h1 class="search-title">Найдите нужный гайд по ремонту</h1>
-                <div class="search">
-                    <input type="text" placeholder="Например: замена экрана iPhone..." class="search__input">
-                    <button class="search__button">
-                        <i class="fas fa-search"></i>
-                        <span>Поиск</span>
-                    </button>
-                </div>
-                <div class="search-tags">
-                    <span>Популярные запросы:</span>
-                    <a href="#">чистка ноутбука</a>
-                    <a href="#">замена батареи</a>
-                    <a href="#">ремонт HDMI</a>
-                </div>
-            </div>
-        </div>
-    </div>
+/* Базовые стили */
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: var(--transition);
+    background-image: 
+        radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.05) 1px, transparent 0);
+    background-size: 20px 20px;
+}
 
-    <main>
-        <section id="categories" class="categories">
-            <div class="container">
-                <h2 class="section__title">Категории ремонта</h2>
-                <p class="section__subtitle">Выберите категорию устройства, которое нужно починить</p>
-                <div class="categories__grid">
-                    <a href="tv.html" class="category-card">
-                        <div class="category-card__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
-                                <polyline points="17 2 12 7 7 2"></polyline>
-                            </svg>
-                        </div>
-                        <h3 class="category-card__title">Телевизоры</h3>
-                        <p class="category-card__count">24 гайда</p>
-                    </a>
-                    <a href="cameras.html" class="category-card">
-                        <div class="category-card__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                                <circle cx="12" cy="13" r="4"></circle>
-                            </svg>
-                        </div>
-                        <h3 class="category-card__title">Фотоаппараты</h3>
-                        <p class="category-card__count">18 гайдов</p>
-                    </a>
-                    <a href="consoles.html" class="category-card">
-                        <div class="category-card__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="6" y="3" width="12" height="18" rx="2"></rect>
-                                <path d="M8 7h8m-8 5h8m-8 5h8"></path>
-                            </svg>
-                        </div>
-                        <h3 class="category-card__title">Игровые приставки</h3>
-                        <p class="category-card__count">15 гайдов</p>
-                    </a>
-                    <a href="laptops.html" class="category-card">
-                        <div class="category-card__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="2" y1="20" x2="22" y2="20"></line>
-                            </svg>
-                        </div>
-                        <h3 class="category-card__title">Ноутбуки</h3>
-                        <p class="category-card__count">32 гайда</p>
-                    </a>
-                    <a href="smartphones.html" class="category-card">
-                        <div class="category-card__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                <line x1="12" y1="18" x2="12" y2="18"></line>
-                            </svg>
-                        </div>
-                        <h3 class="category-card__title">Смартфоны</h3>
-                        <p class="category-card__count">45 гайдов</p>
-                    </a>
-                    <a href="#" class="category-card">
-                        <div class="category-card__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 6l3 6h12l3-6"></path>
-                                <path d="M3 12h18"></path>
-                                <path d="M6 12v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-6"></path>
-                            </svg>
-                        </div>
-                        <h3 class="category-card__title">Мелкая техника</h3>
-                        <p class="category-card__count">28 гайдов</p>
-                    </a>
-                    <a href="#" class="category-card">
-                        <div class="category-card__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                                <rect x="6" y="8" width="12" height="8" rx="1"></rect>
-                                <line x1="6" y1="12" x2="6" y2="12"></line>
-                                <line x1="18" y1="12" x2="18" y2="12"></line>
-                            </svg>
-                        </div>
-                        <h3 class="category-card__title">Крупная техника</h3>
-                        <p class="category-card__count">22 гайда</p>
-                    </a>
-                    <a href="#" class="category-card">
-                        <div class="category-card__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
-                                <polygon points="12 15 17 21 7 21 12 15"></polygon>
-                            </svg>
-                        </div>
-                        <h3 class="category-card__title">Автоэлектроника</h3>
-                        <p class="category-card__count">16 гайдов</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+/* Контейнер */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
-        <section class="popular-guides">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Популярные гайды</h2>
-                    <a href="all-guides.html" class="link">Смотреть все</a>
-                </div>
-                <div class="guides__grid">
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="img/guide1.jpg" alt="Чистка ноутбука">
-                            <span class="guide-card__badge">Новое</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.8
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 12 мин
-                                </span>
-                            </div>
-                            <h3 class="guide-card__title">Как почистить ноутбук от пыли</h3>
-                            <p class="guide-card__excerpt">Подробная инструкция для новичков с фото</p>
-                            <a href="articles/clean-laptop.html" class="button button--small">Читать</a>
-                        </div>
-                    </article>
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="img/guide2.jpg" alt="Ремонт телевизора">
-                            <span class="guide-card__badge">Топ</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.9
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 8 мин
-                                </span>
-                            </div>
-                            <h3 class="guide-card__title">Ремонт разъема HDMI</h3>
-                            <p class="guide-card__excerpt">5 шагов для восстановления контактов</p>
-                            <a href="articles/repair-hdmi.html" class="button button--small">Читать</a>
-                        </div>
-                    </article>
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="img/guide3.jpg" alt="Замена батареи">
-                            <span class="guide-card__badge">Просто</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <div class="guide-card__meta">
-                                <span class="guide-card__rating">
-                                    <i class="fas fa-star"></i> 4.7
-                                </span>
-                                <span class="guide-card__time">
-                                    <i class="far fa-clock"></i> 6 мин
-                                </span>
-                            </div>
-                            <h3 class="guide-card__title">Замена батареи в смартфоне</h3>
-                            <p class="guide-card__excerpt">Пошаговое руководство с видео</p>
-                            <a href="articles/battery-replacement.html" class="button button--small">Читать</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
+/* Шапка */
+.header {
+    background: var(--primary) !important;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">TechFix</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Разделы</h3>
-                    <ul class="footer__links">
-                        <li><a href="index.html" class="footer__link">Главная</a></li>
-                        <li><a href="all-guides.html" class="footer__link">Все гайды</a></li>
-                        <li><a href="how-it-works.html" class="footer__link">Как это работает?</a></li>
-                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="tv.html" class="footer__link">Телевизоры</a></li>
-                        <li><a href="cameras.html" class="footer__link">Фотоаппараты</a></li>
-                        <li><a href="consoles.html" class="footer__link">Игровые приставки</a></li>
-                        <li><a href="laptops.html" class="footer__link">Ноутбуки</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><a href="https://instagram.com/techfix_kz" class="footer__link"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    transition: var(--transition);
+}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.querySelector('.search__input');
-            const examples = [
-                'Замена экрана iPhone...',
-                'Чистка матрицы фотоаппарата',
-                'Не работает кабель HDMI',
-                'Не работает телевизор',
-                'Bluetooth в машине не видит телефон'
-            ];
-            
-            let currentIndex = 0;
-            
-            function updatePlaceholder() {
-                searchInput.placeholder = examples[currentIndex];
-                currentIndex = (currentIndex + 1) % examples.length;
-            }
-            
-            // Меняем placeholder сразу при загрузке
-            updatePlaceholder();
-            
-            // Устанавливаем интервал для смены каждые 3 секунды
-            setInterval(updatePlaceholder, 3000);
-        });
-    </script>
+/* Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    transition: var(--transition);
+    letter-spacing: -0.5px;
+}
 
-    <script src="app.js"></script>
-</body>
-</html>
+.logo:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.logo__icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+.logo__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Навигация */
+.nav__list {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: var(--transition);
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.nav__link:hover, 
+.nav__link:focus {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav__link.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Кнопки */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 0.95rem;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    z-index: -1;
+    transition: var(--transition);
+    opacity: 1;
+}
+
+.button--primary {
+    background: var(--primary);
+    color: white;
+}
+
+.button--primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.button--small {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* Переключатель темы */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+}
+
+/* Секция поиска */
+.search-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    padding: 60px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.search-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+    line-height: 1.3;
+}
+
+.search {
+    display: flex;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.search__input {
+    flex: 1;
+    padding: 16px 20px;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: var(--transition);
+}
+
+.search__input:focus {
+    box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.search__button {
+    background: var(--accent);
+    color: var(--primary);
+    border: none;
+    padding: 0 24px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.search__button:hover {
+    background: #b8d9d4;
+}
+
+.search__button i {
+    font-size: 1rem;
+}
+
+.search__button span {
+    display: none;
+}
+
+.search-tags {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.search-tags a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.search-tags a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Категории */
+.categories {
+    padding: 80px 0;
+    background: var(--background);
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    color: var(--primary);
+}
+
+.section__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+.section__subtitle {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.link:hover {
+    color: var(--primary-dark);
+}
+
+.link i {
+    font-size: 0.9rem;
+}
+
+.categories__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    border-radius: var(--border-radius);
+    padding: 30px 20px;
+    text-align: center;
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+    background: var(--background-alt) !important;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--elegant-shadow);
+    border-color: var(--accent);
+}
+
+.category-card__icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--primary);
+    transition: var(--transition);
+    background: var(--primary-light);
+    border-radius: 50%;
+}
+
+.category-card__icon svg {
+    width: 40px;
+    height: 40px;
+    stroke-width: 1.5;
+}
+
+.category-card:hover .category-card__icon {
+    transform: scale(1.1);
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.category-card__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: var(--transition);
+    color: var(--primary);
+}
+
+.category-card__count {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Гайды */
+.popular-guides {
+    padding: 80px 0;
+    background: var(--background-alt);
+    position: relative;
+}
+
+.guides__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.guide-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    background: var(--background-alt);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.guide-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--elegant-shadow);
+}
+
+.guide-card__image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.guide-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.guide-card:hover .guide-card__image img {
+    transform: scale(1.1);
+}
+
+.guide-card__badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.guide-card__content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+.guide-card__excerpt {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.guide-card__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: auto;
+}
+
+/* Подвал */
+.footer {
+    background: var(--primary) !important;
+    color: white;
+    padding: 60px 0 20px;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer__col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer__col--logo {
+    max-width: 300px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-logo .logo__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-logo .logo__icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+}
+
+.footer__text {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.footer__link:hover {
+    color: white !important;
+    transform: translateX(5px);
+}
+
+.footer__link i {
+    font-size: 0.9rem;
+    width: 18px;
+    text-align: center;
+}
+
+.footer__bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Темная тема */
+body[data-theme="dark"] {
+    color: var(--dark-text);
+    background: var(--dark-background);
+    background-image: 
+        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+}
+
+body[data-theme="dark"] .header {
+    background: var(--primary) !important;
+}
+
+body[data-theme="dark"] .hero,
+body[data-theme="dark"] .popular-guides {
+    background: var(--dark-background-alt);
+}
+
+body[data-theme="dark"] .hero__title,
+body[data-theme="dark"] .section__title,
+body[data-theme="dark"] .guide-card__title,
+body[data-theme="dark"] .category-card__title {
+    color: var(--accent);
+}
+
+body[data-theme="dark"] .hero__subtitle,
+body[data-theme="dark"] .section__subtitle,
+body[data-theme="dark"] .category-card__count,
+body[data-theme="dark"] .guide-card__excerpt,
+body[data-theme="dark"] .guide-card__meta {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body[data-theme="dark"] .category-card,
+body[data-theme="dark"] .guide-card {
+    background: var(--dark-background) !important;
+    border-color: var(--dark-border);
+}
+
+body[data-theme="dark"] .category-card:hover,
+body[data-theme="dark"] .guide-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="dark"] .theme-toggle {
+    color: var(--dark-text);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body[data-theme="dark"] .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .search-title {
+        font-size: 1.8rem;
+    }
+    
+    .section__title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__inner {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px 0;
+    }
+    
+    .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .search__button span {
+        display: inline;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-title {
+        font-size: 1.6rem;
+    }
+    
+    .search {
+        flex-direction: column;
+    }
+    
+    .search__input {
+        padding: 14px 16px;
+    }
+    
+    .search__button {
+        padding: 12px;
+        justify-content: center;
+    }
+    
+    .section__title {
+        font-size: 1.8rem;
+    }
+    
+    .categories__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer__col {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer__title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer__links {
+        align-items: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .categories__grid {
+        grid-template-columns: 1fr;
+    }
+}
