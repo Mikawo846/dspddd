@@ -271,7 +271,35 @@
             </div>
         </div>
     </footer>
-
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.querySelector('.search__input');
+            const examples = [
+                'Замена экрана iPhone...',
+                'Чистка матрицы фотоаппарата',
+                'Не работает кабель HDMI',
+                'Не работает телевизор',
+                'Bluetooth в машине не видит телефон'
+            ];
+            
+            let currentIndex = 0;
+            
+            function updatePlaceholder() {
+                searchInput.placeholder = examples[currentIndex];
+                currentIndex = (currentIndex + 1) % examples.length;
+            }
+            
+            // Меняем placeholder сразу при загрузке
+            updatePlaceholder();
+            
+            // Устанавливаем интервал для смены каждые 3 секунды
+            setInterval(updatePlaceholder, 3000);
+            
+            // Добавляем анимацию перехода
+            searchInput.style.transition = 'opacity 0.5s ease';
+        });
+        </script>
     <script src="app.js"></script>
 </body>
 </html>
