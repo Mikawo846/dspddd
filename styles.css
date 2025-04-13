@@ -421,6 +421,41 @@ body {
 .category-card__count {
     color: var(--text-light);
     font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Добавленные стили для кнопок в карточках категорий */
+.category-card__buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.category-card__buttons .button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    flex: 1;
+    max-width: 120px;
+}
+
+/* Адаптивность для кнопок в карточках */
+@media (max-width: 576px) {
+    .category-card__buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .category-card__buttons .button {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.category-card__count {
+    color: var(--text-light);
+    font-size: 0.9rem;
 }
 
 /* Гайды */
