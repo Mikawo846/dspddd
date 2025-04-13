@@ -5,9 +5,9 @@
     --secondary: #3f37c9;
     --text: #2b2d42;
     --text-light: #8d99ae;
-    --background: ##DCDCDC;
-    --background-alt: #A9A9A9;
-    --border: #696969;
+    --background: #FFFAFA;
+    --background-alt: #F5FFFA;
+    --border: #FFFAFA;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
