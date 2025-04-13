@@ -5,22 +5,16 @@
     --secondary: #3f37c9;
     --text: #2b2d42;
     --text-light: #8d99ae;
-    --background: #ffffff;
-    --background-alt: #f8f9fa;
-    --border: #e9ecef;
+    --background: ##DCDCDC;
+    --background-alt: #A9A9A9;
+    --border: #696969;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
-    
-    /* Тёмная тема */
-    --dark-text: #f8f9fa;
-    --dark-background: #212529;
-    --dark-background-alt: #343a40;
-    --dark-border: #495057;
 }
 
 /* Базовые стили */
 body {
-    background-color: #f8f9fa;
+    background-color: #DCDCDC;
     background-image: 
         linear-gradient(rgba(248, 249, 250, 0.9), rgba(248, 249, 250, 0.9)),
         url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" opacity="0.05"><rect x="50" y="50" width="500" height="300" fill="none" stroke="%234361ee" stroke-width="2"/><rect x="100" y="100" width="400" height="200" fill="none" stroke="%234361ee" stroke-width="1" stroke-dasharray="5,5"/><circle cx="300" cy="200" r="30" fill="none" stroke="%234361ee" stroke-width="1"/><line x1="150" y1="150" x2="250" y2="150" stroke="%234361ee" stroke-width="1"/><line x1="350" y1="150" x2="450" y2="150" stroke="%234361ee" stroke-width="1"/><line x1="150" y1="250" x2="250" y2="250" stroke="%234361ee" stroke-width="1"/><line x1="350" y1="250" x2="450" y2="250" stroke="%234361ee" stroke-width="1"/><text x="300" y="120" font-family="Arial" font-size="14" fill="%234361ee" text-anchor="middle">MB-2024</text></svg>');
