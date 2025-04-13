@@ -341,13 +341,19 @@ body {
 }
 
 .section__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 60px;
+    margin: 60px 0;
+    width: 100%;
+    min-height: 150px; /* Добавляем высоту для вертикального центрирования */
 }
 
 .section__title {
-    font-size: 2.4rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 800;
     margin-bottom: 16px;
     position: relative;
     display: inline-block;
@@ -423,13 +429,16 @@ body {
 }
 
 .category-card__icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 24px;
+    width: 200px; /* Было 40px, увеличиваем в 5 раз */
+    height: 200px;
+    margin-bottom: 30px;
     transition: var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(202, 228, 223, 0.2);
+    border-radius: 50%;
+    padding: 40px; /* Увеличиваем отступы пропорционально */
 }
 
 .category-card__icon svg {
@@ -439,9 +448,11 @@ body {
     transition: var(--transition);
 }
 
-.category-card:hover .category-card__icon svg {
-    fill: var(--secondary);
-    transform: scale(1.1);
+.category-card__icon svg {
+    width: 120px; /* Увеличиваем размер SVG в 5 раз */
+    height: 120px;
+    fill: var(--primary);
+    transition: var(--transition);
 }
 
 .category-card__title {
