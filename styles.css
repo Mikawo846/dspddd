@@ -61,6 +61,7 @@ body {
 }
 
 .header__inner {
+    height: 70px; /* Фиксированная высота шапки */
     display: flex;
     align-items: center;
     justify-content: space-between;
