@@ -1,138 +1,136 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотоаппараты – Ремонт и инструкции | TechFix</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фотоаппараты | ElektroSkupka</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f4f4f4, #e8e8e8);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav, footer {
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    nav .menu {
+      display: flex;
+      gap: 20px;
+    }
+    nav .menu a {
+      text-decoration: none;
+      color: #333;
+    }
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .guide-tile {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+    .pagination button {
+      padding: 8px 12px;
+      background: linear-gradient(to right, #00c97b, #b5e655);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .pagination button.active {
+      background: #00995e;
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="index.html" class="logo">
-                    <span class="logo__icon">
-                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                            <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" fill="currentColor"/>
-                        </svg>
-                    </span>
-                    <span class="logo__text">TechFix</span>
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="cameras.html" class="nav__link active">Фотоаппараты</a></li>
-                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
-                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
-                    </ul>
-                </nav>
-                <div class="header__actions">
-                    <button class="theme-toggle" aria-label="Переключить тему">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
+  <header>
+    <nav>
+      <div class="logo">ElektroSkupka</div>
+      <div class="menu">
+        <a href="index.html">Главная</a>
+        <a href="tv.html">Телевизоры</a>
+        <a href="cameras.html">Фотоаппараты</a>
+        <a href="consoles.html">Приставки</a>
+        <a href="laptops.html">Ноутбуки</a>
+        <a href="smartphones.html">Смартфоны</a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <section class="categories">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Ремонт фотоаппаратов</h2>
-                    <p class="section__subtitle">Подробные инструкции по ремонту цифровых и зеркальных камер</p>
-                </div>
-                <div class="guides__grid">
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="img/camera-lens-clean.jpg" alt="Чистка объектива">
-                            <span class="guide-card__badge">Новое</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <div class="guide-card__meta">
-                                <span><i class="fas fa-star"></i> 4.9</span>
-                                <span><i class="far fa-clock"></i> 10 мин</span>
-                            </div>
-                            <h3 class="guide-card__title">Чистка объектива фотоаппарата</h3>
-                            <p class="guide-card__excerpt">Как безопасно удалить пыль и отпечатки с линзы</p>
-                            <a href="articles/lens-cleaning.html" class="button button--small">Читать</a>
-                        </div>
-                    </article>
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="img/camera-sensor-repair.jpg" alt="Ремонт матрицы">
-                            <span class="guide-card__badge">Топ</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <div class="guide-card__meta">
-                                <span><i class="fas fa-star"></i> 4.8</span>
-                                <span><i class="far fa-clock"></i> 15 мин</span>
-                            </div>
-                            <h3 class="guide-card__title">Замена или ремонт матрицы</h3>
-                            <p class="guide-card__excerpt">Инструкция с фото по демонтажу и установке</p>
-                            <a href="articles/sensor-repair.html" class="button button--small">Читать</a>
-                        </div>
-                    </article>
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="img/camera-flash-fix.jpg" alt="Не работает вспышка">
-                            <span class="guide-card__badge">Просто</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <div class="guide-card__meta">
-                                <span><i class="fas fa-star"></i> 4.6</span>
-                                <span><i class="far fa-clock"></i> 8 мин</span>
-                            </div>
-                            <h3 class="guide-card__title">Что делать, если не работает вспышка</h3>
-                            <p class="guide-card__excerpt">Проверка питания, конденсаторов и лампы</p>
-                            <a href="articles/flash-not-working.html" class="button button--small">Читать</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
+  <main>
+    <section class="guides-grid" id="guides-container"></section>
+    <div class="pagination" id="pagination"></div>
+  </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col footer__col--logo">
-                    <a href="index.html" class="footer-logo">
-                        <span class="logo__icon">
-                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
-                                <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="logo__text">TechFix</span>
-                    </a>
-                    <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Категории</h3>
-                    <ul class="footer__links">
-                        <li><a href="tv.html" class="footer__link">Телевизоры</a></li>
-                        <li><a href="cameras.html" class="footer__link">Фотоаппараты</a></li>
-                        <li><a href="consoles.html" class="footer__link">Приставки</a></li>
-                        <li><a href="laptops.html" class="footer__link">Ноутбуки</a></li>
-                        <li><a href="smartphones.html" class="footer__link">Смартфоны</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__links">
-                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>© 2024 TechFix. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
+  <footer>
+    <p style="text-align:center">&copy; 2025 ElektroSkupka. Все права защищены.</p>
+  </footer>
+
+  <script>
+    const guides = Array.from({length: 30}, (_, i) => `Гайд по фотоаппаратам #${i + 1}`);
+    const container = document.getElementById('guides-container');
+    const pagination = document.getElementById('pagination');
+    const perPage = 10;
+    let currentPage = 1;
+
+    function renderGuides(page) {
+      container.innerHTML = '';
+      const start = (page - 1) * perPage;
+      const end = start + perPage;
+      const currentGuides = guides.slice(start, end);
+
+      currentGuides.forEach(title => {
+        const tile = document.createElement('div');
+        tile.className = 'guide-tile';
+        tile.textContent = title;
+        container.appendChild(tile);
+      });
+    }
+
+    function renderPagination() {
+      pagination.innerHTML = '';
+      const pages = Math.ceil(guides.length / perPage);
+      for (let i = 1; i <= pages; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        if (i === currentPage) btn.classList.add('active');
+        btn.onclick = () => {
+          currentPage = i;
+          renderGuides(currentPage);
+          renderPagination();
+        };
+        pagination.appendChild(btn);
+      }
+    }
+
+    renderGuides(currentPage);
+    renderPagination();
+  </script>
 </body>
 </html>
