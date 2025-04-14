@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,11 +32,6 @@
                         <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
                     </ul>
                 </nav>
-                <div class="header__actions">
-                    <button class="theme-toggle" aria-label="Переключить тему">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
             </div>
         </div>
     </header>
@@ -46,7 +41,7 @@
             <div class="search-wrapper">
                 <h1 class="search-title">Найдите нужный гайд по ремонту</h1>
                 <div class="search">
-                    <input type="text" placeholder="Например: замена экрана iPhone..." class="search__input">
+                    <input type="text" placeholder="Например: замена экрана iPhone..." class="search__input" id="searchInput">
                     <button class="search__button">
                         <i class="fas fa-search"></i>
                         <span>Поиск</span>
@@ -66,8 +61,9 @@
         <section id="categories" class="categories">
             <div class="container">
                 <div class="section__header">
-                <h2 class="section__title">Категории ремонта</h2>
-                <p class="section__subtitle">Выберите категорию устройства, которое нужно починить</p>
+                    <h2 class="section__title">Категории ремонта</h2>
+                    <p class="section__subtitle">Выберите категорию устройства, которое нужно починить</p>
+                </div>
                 <div class="categories__grid">
                     <a href="tv.html" class="category-card">
                         <div class="category-card__icon">
@@ -275,7 +271,7 @@
    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.querySelector('.search__input');
+            const searchInput = document.getElementById('searchInput');
             const examples = [
                 'Замена экрана iPhone...',
                 'Чистка матрицы фотоаппарата',
@@ -292,10 +288,20 @@
             ];
             
             let currentIndex = 0;
+            let isAnimating = false;
             
             function updatePlaceholder() {
-                searchInput.placeholder = examples[currentIndex];
-                currentIndex = (currentIndex + 1) % examples.length;
+                if (isAnimating) return;
+                
+                isAnimating = true;
+                searchInput.style.opacity = '0.5';
+                
+                setTimeout(() => {
+                    searchInput.placeholder = examples[currentIndex];
+                    searchInput.style.opacity = '1';
+                    isAnimating = false;
+                    currentIndex = (currentIndex + 1) % examples.length;
+                }, 500);
             }
             
             // Меняем placeholder сразу при загрузке
@@ -307,7 +313,6 @@
             // Добавляем анимацию перехода
             searchInput.style.transition = 'opacity 0.5s ease';
         });
-        </script>
-    <script src="app.js"></script>
+    </script>
 </body>
 </html>
