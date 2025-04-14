@@ -275,38 +275,64 @@
    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.querySelector('.search__input');
-            const examples = [
-                'Замена экрана iPhone...',
-                'Чистка матрицы фотоаппарата',
-                'Не работает кабель HDMI',
-                'Не работает телевизор',
-                'Bluetooth в машине не видит телефон',
-                'Течет холодильник',
-                'Камера не видит SD карту',
-                'Регестратор перестал записывать',
-                'Экран в машине погас и не работает сенсор',
-                'Не работает вспышка',
-                'Фен дует холодным воздухом',
-                'Слетели каналы на телевизоре',
-            ];
+    const searchInput = document.querySelector('.search__input');
+    const searchInputWrapper = document.querySelector('.search');
+    const examples = [
+        'Замена экрана iPhone...',
+        'Чистка матрицы фотоаппарата',
+        'Не работает кабель HDMI',
+        'Не работает телевизор',
+        'Bluetooth в машине не видит телефон',
+        'Течет холодильник',
+        'Камера не видит SD карту',
+        'Регестратор перестал записывать',
+        'Экран в машине погас и не работает сенсор',
+        'Не работает вспышка',
+        'Фен дует холодным воздухом',
+        'Слетели каналы на телевизоре',
+    ];
+    
+    // Создаем контейнер для анимации
+    const placeholderContainer = document.createElement('div');
+    placeholderContainer.style.position = 'relative';
+    placeholderContainer.style.height = '20px';
+    placeholderContainer.style.overflow = 'hidden';
+    
+    // Создаем элемент для текста
+    const placeholderText = document.createElement('div');
+    placeholderText.style.position = 'absolute';
+    placeholderText.style.width = '100%';
+    placeholderText.style.transition = 'all 0.5s ease';
+    
+    placeholderContainer.appendChild(placeholderText);
+    searchInput.insertAdjacentElement('afterend', placeholderContainer);
+    searchInput.placeholder = ''; // Убираем стандартный placeholder
+    
+    let currentIndex = 0;
+    
+    function updatePlaceholder() {
+        placeholderText.style.opacity = '0';
+        placeholderText.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            placeholderText.textContent = examples[currentIndex];
+            placeholderText.style.opacity = '1';
+            placeholderText.style.transform = 'translateY(0)';
             
-            let currentIndex = 0;
-            
-            function updatePlaceholder() {
-                searchInput.placeholder = examples[currentIndex];
-                currentIndex = (currentIndex + 1) % examples.length;
-            }
-            
-            // Меняем placeholder сразу при загрузке
-            updatePlaceholder();
-            
-            // Устанавливаем интервал для смены каждые 3 секунды
-            setInterval(updatePlaceholder, 3000);
-            
-            // Добавляем анимацию перехода
-            searchInput.style.transition = 'opacity 0.5s ease';
-        });
+            currentIndex = (currentIndex + 1) % examples.length;
+        }, 500);
+    }
+    
+    // Инициализация
+    updatePlaceholder();
+    setInterval(updatePlaceholder, 3000);
+    
+    // Адаптация для мобильных устройств
+    if (window.innerWidth <= 768) {
+        placeholderContainer.style.display = 'none';
+        searchInput.placeholder = 'Поиск по гайдам...';
+    }
+});
         </script>
     <script src="app.js"></script>
 </body>
