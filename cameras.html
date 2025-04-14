@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт Фотоаппаратов | TechFix</title>
-    <!-- Обязательные стили -->
+    <title>Фотоаппараты – Ремонт и инструкции | TechFix</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка (копия из cameras.html) -->
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a href="./index.html" class="logo">
-                    <span class="logo__icon">🔧</span>
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">
+                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                            <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" fill="currentColor"/>
+                        </svg>
+                    </span>
                     <span class="logo__text">TechFix</span>
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li><a href="./tv.html" class="nav__link">Телевизоры</a></li>
-                        <li><a href="./cameras.html" class="nav__link">Фотоаппараты</a></li>
-                        <li><a href="./consoles.html" class="nav__link">Игровые приставки</a></li>
-                        <li><a href="./laptops.html" class="nav__link">Ноутбуки</a></li>
-                        <li><a href="./smartphones.html" class="nav__link">Смартфоны</a></li>
+                        <li><a href="tv.html" class="nav__link">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="nav__link active">Фотоаппараты</a></li>
+                        <li><a href="consoles.html" class="nav__link">Приставки</a></li>
+                        <li><a href="laptops.html" class="nav__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="nav__link">Смартфоны</a></li>
                     </ul>
                 </nav>
                 <div class="header__actions">
@@ -36,157 +38,101 @@
         </div>
     </header>
 
-    <!-- Основное содержимое -->
-    <main class="category-page">
-        <div class="container">
-            <div class="breadcrumbs">
-                <a href="./index.html">Главная</a> → <span>[Категория]</span>
+    <main>
+        <section class="categories">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Ремонт фотоаппаратов</h2>
+                    <p class="section__subtitle">Подробные инструкции по ремонту цифровых и зеркальных камер</p>
+                </div>
+                <div class="guides__grid">
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/camera-lens-clean.jpg" alt="Чистка объектива">
+                            <span class="guide-card__badge">Новое</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                                <span><i class="far fa-clock"></i> 10 мин</span>
+                            </div>
+                            <h3 class="guide-card__title">Чистка объектива фотоаппарата</h3>
+                            <p class="guide-card__excerpt">Как безопасно удалить пыль и отпечатки с линзы</p>
+                            <a href="articles/lens-cleaning.html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/camera-sensor-repair.jpg" alt="Ремонт матрицы">
+                            <span class="guide-card__badge">Топ</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span><i class="far fa-clock"></i> 15 мин</span>
+                            </div>
+                            <h3 class="guide-card__title">Замена или ремонт матрицы</h3>
+                            <p class="guide-card__excerpt">Инструкция с фото по демонтажу и установке</p>
+                            <a href="articles/sensor-repair.html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-card__image">
+                            <img src="img/camera-flash-fix.jpg" alt="Не работает вспышка">
+                            <span class="guide-card__badge">Просто</span>
+                        </div>
+                        <div class="guide-card__content">
+                            <div class="guide-card__meta">
+                                <span><i class="fas fa-star"></i> 4.6</span>
+                                <span><i class="far fa-clock"></i> 8 мин</span>
+                            </div>
+                            <h3 class="guide-card__title">Что делать, если не работает вспышка</h3>
+                            <p class="guide-card__excerpt">Проверка питания, конденсаторов и лампы</p>
+                            <a href="articles/flash-not-working.html" class="button button--small">Читать</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-
-            <h1 class="category-title">Ремонт Фотооаппаратов</h1>
-            <img src="./img/tv-banner.jpg" alt="Ремонт телевизоров" class="category-banner">
-            <p class="category-description">Здесь вы найдете решения для большенства вопросов которые возникают у владельцев фотоаппаратов</p>
-
-
-            <section class="common-problems">
-                <h2>Частые проблемы</h2>
-                <div class="problems-grid">
-                    <!-- Пример карточки (повторите для каждой проблемы) -->
-                    <a href="./guides/[категория]-[проблема].html" class="problem-card">
-                        <i class="fas fa-[иконка]"></i>
-                        <h3>[Проблема]</h3>
-                        <p>[Решение]</p>
-                    </a>
-                </div>
-            </section>
-
-            <section class="guides-section">
-                <h2>Гайды по ремонту</h2>
-                <div class="guides-grid">
-                    <!-- Пример гайда (повторите для каждого гайда) -->
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="./images/sensor-cleaning.jpg" alt="Чистка матрицы"">
-                            <span class="difficulty easy">Легко</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <h3>Чистка матрицы фотоаппарата</h3>
-                            <p>легкая чистка подсилу каждму</p>
-                            <a href="./guides/sensor-cleaning-guide.html" class="button">Читать</a>
-                        </div>
-                    </article>
-                    
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="./images/sensor-cleaning.jpg" alt="фшощз  щыщсщ "">
-                            <span class="difficulty easy">Легко</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <h3>Удаление матрицы фотоаппарата</h3>
-                            <p>лыжвз ыщыщ ыщодму</p>
-                            <a href="./guides/sensor-cleaning-guide.html" class="button">Читать</a>
-                        </div>
-                    </article>
-                    
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="./images/sensor-cleaning.jpg" alt="сылоз ызщомшщовы  "">
-                            <span class="difficulty easy">Легко</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <h3>Учьоь ьлччш шовоз </h3>
-                            <p>ыщ шы гшыщлызом зщоышм </p>
-                            <a href="./guides/sensor-cleaning-guide.html" class="button">Читать</a>
-                        </div>
-                    </article>
-                    
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="./images/sensor-cleaning.jpg" alt="ывзщлылзщо "">
-                            <span class="difficulty easy">Легко</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <h3>вооооооооовлсоо оввв</h3>
-                            <p>ыыыыыыыыыыыыыыыыыыыыыы</p>
-                            <a href="./guides/sensor-cleaning-guide.html" class="button">Читать</a>
-                        </div>
-                    </article>
-                    
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="./images/sensor-cleaning.jpg" alt="ввввввввввввввввв "">
-                            <span class="difficulty easy">Легко</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <h3>вввввввааааааааааааа</h3>
-                            <p>гггггггггггггггггг</p>
-                            <a href="./guides/sensor-cleaning-guide.html" class="button">Читать</a>
-                        </div>
-                    </article>
-                    
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="./images/sensor-cleaning.jpg" alt="ылфзооыввшмо шовщш ывщмо "">
-                            <span class="difficulty easy">Легко</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <h3>юююююююююююююююю</h3>
-                            <p>ъъъъъъъъъъъъъъъъъъъ</p>
-                            <a href="./guides/sensor-cleaning-guide.html" class="button">Читать</a>
-                        </div>
-                    </article>
-                    
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="./images/sensor-cleaning.jpg" alt="ыыыыыыысссссссссс всвввв "">
-                            <span class="difficulty easy">Легко</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <h3>дддддолооощыооывов</h3>
-                            <p>ххххххххххххххххххшшвшввввотш</p>
-                            <a href="./guides/sensor-cleaning-guide.html" class="button">Читать</a>
-                        </div>
-                    </article>
-                    
-                    <article class="guide-card">
-                        <div class="guide-card__image">
-                            <img src="./images/sensor-cleaning.jpg" alt="ырпавпывавыавыа"">
-                            <span class="difficulty easy">Легко</span>
-                        </div>
-                        <div class="guide-card__content">
-                            <h3>влсолдыослзфоызовцв</h3>
-                            <p>йййййййййййййййййййй</p>
-                            <a href="./guides/sensor-cleaning-guide.html" class="button">Читать</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </div>
+        </section>
     </main>
 
-    <!-- Подвал (копия из cameras.html) -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
-                <div class="footer__col">
-                    <h3 class="footer__title">TechFix</h3>
+                <div class="footer__col footer__col--logo">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo__icon">
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15L7 10H17L12 15Z" fill="currentColor"/>
+                                <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="logo__text">TechFix</span>
+                    </a>
                     <p class="footer__text">Помогаем ремонтировать электронику с 2024 года</p>
                 </div>
-                <!-- Остальные колонки футера -->
+                <div class="footer__col">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="tv.html" class="footer__link">Телевизоры</a></li>
+                        <li><a href="cameras.html" class="footer__link">Фотоаппараты</a></li>
+                        <li><a href="consoles.html" class="footer__link">Приставки</a></li>
+                        <li><a href="laptops.html" class="footer__link">Ноутбуки</a></li>
+                        <li><a href="smartphones.html" class="footer__link">Смартфоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://t.me/techfix_kz" class="footer__link"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="mailto:support@techfix.kz" class="footer__link"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copyright">© 2024 TechFix. Все права защищены.</p>
+                <p>© 2024 TechFix. Все права защищены.</p>
             </div>
         </div>
     </footer>
-
-    <script src="./app.js"></script>
-</body>
-</html>
-            </div>
-        </div>
-    </footer>
-
-    <script src="./app.js"></script>
 </body>
 </html>
